@@ -1,5 +1,5 @@
 /****************************************************************************************/
-/* covertnine.com Client Boilerplate */
+/* Band Client */
 /****************************************************************************************/
 @import "_client_variables";
 
@@ -101,7 +101,7 @@ body {
 
 .header-navbar .navbar .nav .nav-item .nav-link:hover,
 .header-navbar .navbar .nav .nav-item.active .nav-link {
-    border: 1px solid $secondary;
+    // border: 1px solid $secondary;
     color: $secondary;
 }
 
@@ -169,13 +169,13 @@ body {
 .editor-styles-wrapper .c9-cta .c9-h p {
     font-family: $headings-font-family;
     text-transform: uppercase;
-    letter-spacing: .04em;
+    letter-spacing: .01em;
 }
 
 .header-navbar .navbar .nav .nav-item .dropdown-item,
 .header-navbar .navbar .nav .nav-item .nav-link {
     color: $light;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'oswald', sans-serif;
     text-transform: uppercase;
     font-weight: 100;
@@ -1049,30 +1049,8 @@ p.wp-block-subhead,
     }
 }
 
-/* woocommerce support tickets*/
-.c9 .wcsts_ticket_subject,
-.c9 .wcsts_ticket_status {
-    background: transparent;
-}
-
-.c9 .wcsts_ticket_status {
-    font-size: 1.2em;
-}
-
-.c9 .wcsts_option_block select {
-    height: 50px;
-    -webkit-appearance: none;
-    border-radius: 0px;
-    padding: 10px;
-    background-color: $light;
-}
-
-#wcsts_new_ticket_description_box ul li {
-    color: $gray-900;
-}
-
 /****************************************************************************************/
-/* recent posts widget plugin tim found */
+/* recent posts widget plugin */
 /****************************************************************************************/
 .rpwwt-post-title {
     color: $dark;
@@ -1303,17 +1281,10 @@ body .gform_wrapper ul li.gfield {
 }
 
 .footer-entirety {
-    background: transparent url('/wp-content/uploads/2019/09/chicago-skyline-bg.png') right bottom no-repeat;
-    background-size: cover;
     overflow: visible;
-    min-height: 529px;
-    background-position-x: 74%;
 }
 
 @media only screen and (max-width: 1024px) {
-    .footer-entirety {
-        background-size: contain;
-    }
 
     #footer-full-content .row {
         display: grid;
@@ -1357,75 +1328,4 @@ body .gform_wrapper ul li.gfield {
 .widget_text ul li,
 .widget_recent_entries ul li {
     margin: 14px 0px;
-}
-
-/****************************************************************************************/
-/* wpforo */
-/****************************************************************************************/
-.wpforo .header-navbar {
-    background-color: $primary;
-}
-
-.wpforo .c9 .entry-content {
-    margin-top: 108px;
-}
-
-#wpforo-wrap #wpforo-title {
-    font-family: $font-family-sans-serif;
-    font-weight: 300;
-    color: $dark;
-    letter-spacing: .005em;
-    font-size: 3.6em;
-    margin-bottom: 20px;
-    line-height: 1;
-}
-
-#wpforo-wrap .wpfl-2 .wpforo-forum-title {
-    font-family: $font-family-sans-serif;
-    line-height: 1;
-    font-size: 1.6em;
-    letter-spacing: .005em;
-    font-weight: 300;
-}
-
-#wpforo-wrap .wpfl-2 .cat-title,
-#wpforo-wrap .wpfl-2 .cat-lastpostinfo {
-    font-family: $font-family-base;
-    font-weight: 700;
-    font-size: 1.2em;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-}
-
-.support-header .register-box .wp-block-button {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.support-header .register-box .wp-block-button:last-child {
-    margin-right: 0px;
-}
-
-#wpforo-wrap .wpforo-login-wrap .wpf-field .wpf-field-wrap input[type="submit"] {
-    text-transform: uppercase;
-    font-weight: 200;
-    font-family: $font-family-base;
-    letter-spacing: .1em;
-    font-size: 12px;
-    text-decoration: none;
-    border-radius: 0;
-}
-
-.logged-in .btn-guests {
-    display: none !important;
-}
-
-body:not(.logged-in) .btn-users {
-    display: none !important;
-}
-
-@media only screen and (max-width: 667px) {
-    .wpforo .c9 .entry-content {
-        margin-top: 0px;
-    }
 }

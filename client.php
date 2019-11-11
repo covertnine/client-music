@@ -1,4 +1,6 @@
 <?php
+/* Band Client */
+
 require get_template_directory() . '/client/inc/client-functions.php';
 
 add_filter('acf/settings/save_json', 'c9_acf_json_save_point');

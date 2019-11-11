@@ -14,7 +14,7 @@ if (!function_exists('client_scripts')) {
     {
         wp_enqueue_style('client-styles', get_stylesheet_directory_uri() . '/client/client-assets/dist/client.min.css', array('c9-styles'));
 
-        wp_enqueue_script('smooth-state', get_template_directory_uri() . '/client/client-assets/vendor/jquery.smoothState.min.js', array('jquery'), true);
+        //wp_enqueue_script('smooth-state', get_template_directory_uri() . '/client/client-assets/vendor/jquery.smoothState.min.js', array('jquery'), true);
 
         wp_enqueue_script('client-scripts', get_template_directory_uri() . '/client/client-assets/custom-client.js', array('jquery', 'smooth-state'), true);
         //wp_enqueue_style('c9-megamenu', get_stylesheet_directory_uri() . '/client/client-assets/vendor/megamenu.css', array('c9-styles'));
@@ -68,31 +68,6 @@ define( 'ACF_LITE' , true );
 /* admin clean up*/
 /****************************************************************************************/
 
-function customize_post_admin_menu_labels() {
-	global $menu;
-	global $submenu;
-	$menu[26][0] = 'Support Tickets';
-	$submenu['edit.php'][26][0] = 'All Tickets';
-	echo '';
-}
-add_action( 'admin_menu', 'customize_post_admin_menu_labels', 1000 );
-
-function remove_admin_menu_items() {
-	$remove_menu_items = array(__('Events'),__('Comments'));
-	global $menu;
-	end ($menu);
-	while (prev($menu)){
-		$item = explode(' ',$menu[key($menu)][0]);
-		if(in_array($item[0] != NULL?$item[0]:"" , $remove_menu_items)){
-		unset($menu[key($menu)]);}
-	}
-
-	remove_menu_page( 'wr2x_settings-menu' );
-	remove_menu_page( 'meowapps-main-menu' );
-}
-
-add_action('admin_menu', 'remove_admin_menu_items', 999);
-
 /* Remove Rev Slider Metabox */
 if ( is_admin() ) {
 
@@ -114,7 +89,7 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action( 'wp_head', 'feed_links', 2 ); 
+remove_action('wp_head', 'feed_links', 2 ); 
 remove_action('wp_head', 'feed_links_extra', 3 );
 
 /*Removes prev and next article links*/
