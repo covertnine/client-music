@@ -18,6 +18,11 @@ body {
     padding-bottom: 0px;
 }
 
+/* hide search */
+.nav-item.search {
+    display: none !important;
+}
+
 .header-navbar .navbar-small,
 .blog .header-navbar,
 .archive .header-navbar,
@@ -59,6 +64,8 @@ body {
     margin-top: 1em;
     border: 0px;
     opacity: 0;
+    left: auto;
+    right: 0px;
     -webkit-transition: opacity 3s;
     transition: opacity 3s;
     -webkit-transition-delay: 1s;
@@ -179,6 +186,7 @@ body {
     font-family: 'oswald', sans-serif;
     text-transform: uppercase;
     font-weight: 100;
+    padding: 14px 8px;
 }
 
 p.wp-block-subhead,
