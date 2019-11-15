@@ -29,5 +29,34 @@ jQuery(document).ready(function() {
     //   smoothState = $("#page")
     //     .smoothState(options)
     //     .data("smoothState");
+    // document
+    //   .querySelectorAll(".navbar-nav > .nav-item > .nav-link")
+    //   .forEach(btn => {
+    //     btn.addEventListener("click", () => {
+    //       gsap.to(window, {
+    //         duration: 3,
+    //         scrollTo: { href, offsetY: 70 }
+    //       });
+    //     });
+    //   });
+
+    $("body").on(
+      "click touchstart",
+      ".navbar-nav > .nav-item > .nav-link[href^='/#']",
+      function(event) {
+        event.preventDefault();
+
+        //what link was clicked
+        var sectionLink = $(event.target).attr("href");
+        var anchorID = sectionLink.substr(1);
+
+        // scroll to that part of the page
+        gsap.to(window, {
+          duration: 2,
+          scrollTo: { y: anchorID, offsetY: 55 },
+          ease: Power2.easeOut
+        });
+      }
+    );
   })(jQuery);
 });
