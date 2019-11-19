@@ -19,6 +19,23 @@
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
     font-family: $headings-font-family;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.editor-styles-wrapper .c9-heading .h1,
+.editor-styles-wrapper .c9-heading .h2,
+.editor-styles-wrapper .c9-heading .h3,
+.editor-styles-wrapper .c9-heading .h4,
+.editor-styles-wrapper .c9-heading .h5,
+.editor-styles-wrapper .c9-heading .h6,
+.editor-styles-wrapper .c9-heading h1,
+.editor-styles-wrapper .c9-heading h2,
+.editor-styles-wrapper .c9-heading h3,
+.editor-styles-wrapper .c9-heading h4,
+.editor-styles-wrapper .c9-heading h5,
+.editor-styles-wrapper .c9-heading h6 {
+    line-height: 1.1;
 }
 
 .editor-styles-wrapper .c9-cta .c9-sh p,
@@ -33,9 +50,8 @@
 .editor-styles-wrapper .mce-content-body.button,
 .c9-block-cta .c9-cta-button a {
     text-transform: uppercase;
-    font-weight: 200;
+    font-weight: 700;
     font-family: $font-family-base;
-    letter-spacing: .1em;
 }
 
 .editor-styles-wrapper .button:hover,

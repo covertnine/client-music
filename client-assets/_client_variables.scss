@@ -1,29 +1,24 @@
 @import "../../assets/styles/theme/theme_variables";
 
-@import url("https://use.typekit.net/tet3dqk.css");
+@import url("https://use.typekit.net/att2ajc.css");
 
 :root {
-    font-family: "muli", "helvetica neue", "helvetica",
+    font-family: futura-pt,
+        "helvetica",
         times,
         serif;
 }
 
 // Typography
-$headings-font-family: "league-gothic",
-"league gothic",
-"helvetica neue",
+$headings-font-family: futura-pt,
 "helvetica",
 times,
 serif;
 $headings-font-weight: 700;
 
-$font-family-sans-serif: 'oswald',
-"helvetica neue",
-"helvetica",
-impact,
-serif;
-$font-family-base: "muli",
-"helvetica neue",
+$font-family-sans-serif: futura-pt,
+sans-serif;
+$font-family-base: futura-pt,
 "helvetica",
 times,
 serif;
@@ -37,7 +32,7 @@ $font-weight-bold: 700;
 
 // Colors
 $primary: #ca292c;
-$secondary: #55f0ff;
+$secondary: #121212;
 $success: #21a77a;
 $info: #f7f7f9;
 $warning: #ec971f;
@@ -46,7 +41,7 @@ $dark: #000000;
 $light: #ffffff;
 
 $link-hover-color: #333333;
-$link-color: #4a4a4a;
+$link-color: #121212;
 
 $gray-500: #d2d2d2;
 $gray-600: rgba(151, 151, 151, 1);

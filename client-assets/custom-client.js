@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 
     $("body").on(
       "click touchstart",
-      ".navbar-nav > .nav-item > .nav-link[href^='/#']",
+      ".navbar-nav > .nav-item > .nav-link[href^='/#'], .scroll-me a[href^='/#']",
       function(event) {
         event.preventDefault();
 
@@ -60,3 +60,31 @@ jQuery(document).ready(function() {
     );
   })(jQuery);
 });
+
+// init controller
+var controller = new ScrollMagic.Controller({
+  globalSceneOptions: { duration: 100 }
+});
+
+// build scenes
+new ScrollMagic.Scene({ triggerElement: "#tour" })
+  .setClassToggle(".c9-tour", "nav-highlight") // add class toggle
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#music" })
+  .setClassToggle(".c9-music", "nav-highlight") // add class toggle
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#album" })
+  .setClassToggle(".c9-album", "nav-highlight") // add class toggle
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#videos" })
+  .setClassToggle(".c9-videos", "nav-highlight") // add class toggle
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#store" })
+  .setClassToggle(".c9-store", "nav-highlight") // add class toggle
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#blog" })
+  .setClassToggle(".c9-blog", "nav-highlight") // add class toggle
+  .addTo(controller);
+new ScrollMagic.Scene({ triggerElement: "#photos" })
+  .setClassToggle(".c9-photos", "nav-highlight") // add class toggle
+  .addTo(controller);
