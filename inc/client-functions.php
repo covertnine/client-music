@@ -97,4 +97,3 @@ remove_action('wp_head', 'feed_links_extra', 3 );
 
 /*Removes prev and next article links*/
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
-

@@ -41,7 +41,7 @@ jQuery(document).ready(function() {
     //   });
 
     $("body").on(
-      "click touchstart",
+      "click",
       ".navbar-nav > .nav-item > .nav-link[href^='/#'], .scroll-me a[href^='/#']",
       function(event) {
         event.preventDefault();
@@ -56,35 +56,44 @@ jQuery(document).ready(function() {
           scrollTo: { y: anchorID, offsetY: 55 },
           ease: Power2.easeOut
         });
+
+        $(".navbar-collapse").toggleClass("show");
       }
     );
   })(jQuery);
 });
 
-// init controller
-var controller = new ScrollMagic.Controller({
-  globalSceneOptions: { duration: 100 }
-});
+// add scenes for home scrolling nav links if user is on homepage
+if (jQuery("body.home").length) {
+  // init controller
+  var controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      duration: "100%",
+      triggerHook: 0.5
+    }
+  });
 
-// build scenes
-new ScrollMagic.Scene({ triggerElement: "#tour" })
-  .setClassToggle(".c9-tour", "nav-highlight") // add class toggle
-  .addTo(controller);
-new ScrollMagic.Scene({ triggerElement: "#music" })
-  .setClassToggle(".c9-music", "nav-highlight") // add class toggle
-  .addTo(controller);
-new ScrollMagic.Scene({ triggerElement: "#album" })
-  .setClassToggle(".c9-album", "nav-highlight") // add class toggle
-  .addTo(controller);
-new ScrollMagic.Scene({ triggerElement: "#videos" })
-  .setClassToggle(".c9-videos", "nav-highlight") // add class toggle
-  .addTo(controller);
-new ScrollMagic.Scene({ triggerElement: "#store" })
-  .setClassToggle(".c9-store", "nav-highlight") // add class toggle
-  .addTo(controller);
-new ScrollMagic.Scene({ triggerElement: "#blog" })
-  .setClassToggle(".c9-blog", "nav-highlight") // add class toggle
-  .addTo(controller);
-new ScrollMagic.Scene({ triggerElement: "#photos" })
-  .setClassToggle(".c9-photos", "nav-highlight") // add class toggle
-  .addTo(controller);
+  //set up array of links in nav linking to on-page anchors
+  var navLinks = [];
+
+  jQuery(
+    ".navbar-nav > .nav-item .nav-link[href^='/#'], .scroll-me a[href^='/#']"
+  ).each(function() {
+    // get all link IDs and put them in array from header and direct clicked scroll links
+    navLinks.push(jQuery(this).attr("href"));
+  });
+
+  //loop through those links and add a scene for each that links up properly
+  var setSceneNum = navLinks.length;
+
+  for (var i = 0; i < setSceneNum; i++) {
+    var anchorID = navLinks[i].substr(1);
+    var classLabel = navLinks[i].substr(2);
+
+    new ScrollMagic.Scene({
+      triggerElement: anchorID
+    })
+      .setClassToggle(".c9-" + classLabel, "nav-highlight") // add class toggle
+      .addTo(controller);
+  }
+}
