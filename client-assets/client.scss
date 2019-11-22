@@ -94,7 +94,7 @@ body {
     font-size: 14px;
     font-family: $font-family-sans-serif;
     text-transform: uppercase;
-    positioN: relative;
+    position: relative;
     letter-spacing: 1px;
     padding: 14px 0px;
 }
@@ -419,7 +419,7 @@ p.wp-block-subhead,
 
 .editor-styles-wrapper .c9-vertical-tabs .nav-pills .nav-link.active,
 .c9 .c9-vertical-tabs .nav-pills .nav-link.active {
-    background-color: #c14034;
+    background-color: #f1f1f1;
     color: #fff;
 }
 
@@ -672,8 +672,9 @@ p.wp-block-subhead,
 /****************************************************************************************/
 /* WooCommerce Specifics */
 /****************************************************************************************/
-
-.woocommerce {
+.woocommerce,
+.cart,
+.c9 form label {
     font-size: 16px;
 }
 
