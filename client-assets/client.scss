@@ -14,10 +14,6 @@ body {
   background-color: transparent;
 }
 
-.navbar-brand {
-  padding-bottom: 0px;
-}
-
 /* hide search */
 .nav-item.search {
   display: none !important;
@@ -30,14 +26,6 @@ body {
 .error404 .header-navbar,
 .search .header-navbar {
   background-color: $primary;
-}
-
-.header-navbar .navbar-brand.c9-custom-logo>.c9-home-logo {
-  height: 92px;
-}
-
-.header-navbar .navbar-small .navbar-brand.c9-custom-logo>.c9-home-logo {
-  height: 55px;
 }
 
 .header-navbar .justify-content-center {
@@ -110,7 +98,6 @@ body {
   border: 0px;
   -webkit-animation: fadeInFromNone 0.5s ease-out;
   animation: fadeInFromNone 0.5s ease-out;
-
 }
 
 .header-navbar .nav .nav-item .dropdown-menu.show {
@@ -385,16 +372,6 @@ p.wp-block-subhead,
 /* WordPress Gutenberg Block Specifics */
 /****************************************************************************************/
 
-/* Group Blocks */
-.editor-styles-wrapper .wp-block-group.has-background,
-.wp-block-group.has-background {
-  padding: 20px 25px;
-}
-
-.editor-styles-wrapper .wp-block-group.has-background .wp-block-group__inner-container {
-  padding: 20px 0px;
-}
-
 /* invert link colors on posts grid */
 .entry-content .light-color-text .c9-block-post-grid-title a,
 .editor-styles-wrapper .light-color-text .c9-block-post-grid-title a {
@@ -572,6 +549,10 @@ p.wp-block-subhead,
 
 .bg-dark {
   background-color: $dark;
+}
+
+.has-covertnine-palette-1-background-color {
+  background-color: #fff;
 }
 
 /****************************************************************************************/
