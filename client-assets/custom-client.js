@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 
     $("body").on(
       "click",
-      ".navbar-nav > .nav-item > .nav-link[href^='/#'], .scroll-me a[href^='/#']",
+      ".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']",
       function(event) {
         event.preventDefault();
 
@@ -77,7 +77,7 @@ if (jQuery("body.home").length) {
   var navLinks = [];
 
   jQuery(
-    ".navbar-nav > .nav-item .nav-link[href^='/#'], .scroll-me a[href^='/#']"
+    ".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']"
   ).each(function() {
     // get all link IDs and put them in array from header and direct clicked scroll links
     navLinks.push(jQuery(this).attr("href"));
