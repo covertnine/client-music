@@ -704,12 +704,13 @@ p.wp-block-subhead,
 	//   font-size: 16px;
 }
 
-.theme-c9.woocommerce nav.woocommerce-pagination ul li span,
-.theme-c9.woocommerce nav.woocommerce-pagination ul li .page-numbers {
+.c9.woocommerce nav.woocommerce-pagination ul li span,
+.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers {
 	font-size: 16px;
 }
 
-.woocommerce ul.products li.product .onsale {
+.woocommerce ul.products li.product .onsale,
+.woocommerce span.onsale {
 	box-sizing: content-box;
 }
 
