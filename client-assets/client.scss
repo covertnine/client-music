@@ -700,8 +700,10 @@ p.wp-block-subhead,
 	margin: 0px auto;
 }
 
-.woocommerce .site-main {
-	//   font-size: 16px;
+.woocommerce-message,
+.woocommerce-info,
+.woocommerce-notice {
+	font-size: 16px;
 }
 
 .c9.woocommerce nav.woocommerce-pagination ul li span,
@@ -823,7 +825,7 @@ p.wp-block-subhead,
 	letter-spacing: 1px;
 	color: $light;
 	background-color: $dark;
-	font-size: 14px;
+	font-size: 12px;
 	font-family: $font-family-base;
 	padding: 7px 30px;
 	border-radius: 34px;
@@ -848,6 +850,7 @@ p.wp-block-subhead,
 	border-radius: 0px;
 	letter-spacing: 1px;
 	font-weight: 400;
+	font-size: 12px;
 	font-family: $font-family-base;
 	text-transform: uppercase;
 }
@@ -1037,6 +1040,7 @@ p.wp-block-subhead,
 
 .c9 .woocommerce table.shop_table {
 	border: 0px;
+	font-size: 1.6em;
 }
 
 .editor-styles-wrapper table.shop_table tbody tr td,
