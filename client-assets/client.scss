@@ -19,6 +19,18 @@ body {
 	display: none !important;
 }
 
+.header-navbar .navbar-toggler,
+.header-navbar .nav-search .btn-nav-search {
+	color: $light;
+}
+
+.header-navbar .navbar-toggler:hover,
+.header-navbar .nav-search .btn-nav-search:hover,
+.header-navbar .navbar-toggler:focus,
+.header-navbar .nav-search .btn-nav-search:focus {
+	color: $gray-500;
+}
+
 .header-navbar .navbar-small,
 .blog .header-navbar,
 .archive .header-navbar,
