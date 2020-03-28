@@ -353,7 +353,7 @@ p.wp-block-subhead,
 }
 
 /****************************************************************************************/
-/* post navigation on single posts */
+/* post navigation, tags, categories, on single posts */
 /****************************************************************************************/
 .single .navigation .nav-next a,
 .single .navigation .nav-previous a {
@@ -366,6 +366,52 @@ p.wp-block-subhead,
 .single .navigation .nav-next a:hover,
 .single .navigation .nav-previous a:hover {
 	color: $primary;
+}
+
+@media only screen and (min-width: 768px) {
+	.single .entry-footer {
+		padding: 0px;
+	}
+}
+
+.entry-footer .cat-links {
+	font-size: 14px;
+}
+
+.entry-footer .cat-links,
+.entry-footer .tag-links {
+	margin-bottom: 20px;
+	display: block;
+}
+
+/* tags */
+.i-tag,
+.tags-links,
+.tags-links a {
+	font-weight: 900;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $gray-900;
+	font-size: 12px;
+}
+
+.tags-links a {
+	padding-left: 8px;
+}
+
+.i-tag:hover,
+.tags-links a:hover {
+	color: $gray-500;
+}
+
+.i-tag:before,
+.tags-links a:before {
+	display: inline;
+	content: "\f02b";
+	font: normal normal normal 1.2em/1 FontAwesome;
+	color: $primary;
+	padding-right: 2px;
 }
 
 /****************************************************************************************/
@@ -660,31 +706,6 @@ p.wp-block-subhead,
 	color: $light;
 }
 
-/* tags */
-.i-tag,
-.tags-links,
-.tags-links a {
-	font-weight: 900;
-	letter-spacing: 0.137em;
-	text-decoration: none;
-	text-transform: uppercase;
-	color: $gray-900;
-}
-
-.i-tag:hover,
-.tags-links a:hover {
-	color: $gray-500;
-}
-
-.i-tag:before,
-.tags-links a:before {
-	display: inline;
-	content: "\f02b";
-	font: normal normal normal 1.4rem/1 FontAwesome;
-	color: $primary;
-	padding-right: 4px;
-}
-
 /* search results */
 .updated {
 	display: none;
@@ -868,7 +889,6 @@ p.wp-block-subhead,
 	background-color: $gray-900;
 	color: $light;
 	padding: 7px 30px;
-	border-radius: 0px;
 	letter-spacing: 1px;
 	font-weight: 400;
 	font-size: 12px;
@@ -936,6 +956,29 @@ p.wp-block-subhead,
 .c9 .select2-container .select2-selection--single,
 .single-product.woocommerce form.cart input[type="number"] {
 	height: 50px;
+	border: 1px solid #ccc;
+}
+
+.variations {
+	font-size: 1.6em;
+}
+
+.c9 .woocommerce div.product form.cart .variations select {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	padding-left: 12px;
+	height: 50px;
+	position: relative;
+	z-index: 20;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	color: $gray-900;
+}
+
+.c9 .woocommerce select {
+	border: 1px solid #ccc;
+	background-color: #fff;
 }
 
 .c9 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -991,6 +1034,22 @@ p.wp-block-subhead,
 	transition: background-color .4s ease-out;
 }
 
+.c9 .woocommerce button.button,
+.woocommerce #respond input#submit.disabled,
+.woocommerce #respond input#submit:disabled,
+.woocommerce #respond input#submit:disabled[disabled],
+.woocommerce a.button.disabled,
+.woocommerce a.button:disabled,
+.woocommerce a.button:disabled[disabled],
+.woocommerce button.button.disabled,
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled],
+.woocommerce input.button.disabled,
+.woocommerce input.button:disabled,
+.woocommerce input.button:disabled[disabled] {
+	padding: 16px 33px;
+}
+
 #add_payment_method .wc-proceed-to-checkout a.checkout-button:hover,
 .c9 .woocommerce a.button.alt.checkout-button:hover,
 .c9 .woocommerce button.button.alt.checkout-button:hover,
@@ -1037,8 +1096,7 @@ p.wp-block-subhead,
 .c9 .woocommerce #content table.cart td.actions .coupon,
 .c9 .woocommerce table.cart td.actions .coupon,
 .c9 .woocommerce-page #content table.cart td.actions .coupon,
-.c9 .woocommerce-page table.cart td.actions .coupon,
-.single-product.woocommerce div.product form.cart {
+.c9 .woocommerce-page table.cart td.actions .coupon {
 	display: -webkit-box;
 	display: flex;
 	-webkit-box-align: center;

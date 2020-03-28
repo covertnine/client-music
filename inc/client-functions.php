@@ -20,7 +20,7 @@ if (!function_exists('client_scripts')) {
 
         //wp_enqueue_script('smooth-state', get_template_directory_uri() . '/client/client-assets/vendor/jquery.smoothState.min.js', array('jquery'), true);
         //wp_enqueue_style('c9-megamenu', get_stylesheet_directory_uri() . '/client/client-assets/vendor/megamenu.css', array('c9-styles'));
- 
+
     }
 } // endif function_exists( 'client_scripts' ).
 add_action('wp_enqueue_scripts', 'client_scripts', 99);
@@ -68,22 +68,6 @@ define( 'ACF_LITE' , true );
 /****************************************************************************************/
 
 /****************************************************************************************/
-/* admin clean up*/
-/****************************************************************************************/
-
-/* Remove Rev Slider Metabox */
-if ( is_admin() ) {
-
-	function c9_remove_revolution_slider_meta_boxes() {
-		remove_meta_box( 'mymetabox_revslider_0', 'page', 'normal' );
-		remove_meta_box( 'mymetabox_revslider_0', 'post', 'normal' );
-	}
-
-	add_action( 'do_meta_boxes', 'c9_remove_revolution_slider_meta_boxes' );
-	
-}
-
-/****************************************************************************************/
 /* clean up header with excess WP stuff */
 /****************************************************************************************/
 
@@ -92,7 +76,7 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head', 'wp_shortlink_wp_head');
-remove_action('wp_head', 'feed_links', 2 ); 
+remove_action('wp_head', 'feed_links', 2 );
 remove_action('wp_head', 'feed_links_extra', 3 );
 
 /*Removes prev and next article links*/

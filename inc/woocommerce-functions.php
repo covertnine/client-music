@@ -7,9 +7,9 @@ function c9_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
     // remove related products from single
     remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-    //remove_theme_support( 'wc-product-gallery-zoom' );
-    remove_theme_support( 'wc-product-gallery-lightbox' );
-    remove_theme_support( 'wc-product-gallery-slider' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
 
 }
 
