@@ -1,5 +1,12 @@
 @import "_client_variables";
 
+body .editor-styles-wrapper {
+	font-family: futura-pt,
+		"helvetica",
+		times,
+		serif;
+}
+
 .h1,
 .h2,
 .h3,
@@ -18,9 +25,9 @@
 .editor-styles-wrapper h4,
 .editor-styles-wrapper h5,
 .editor-styles-wrapper h6 {
-    font-family: $headings-font-family;
-    font-weight: 700;
-    line-height: 1.1;
+	font-family: $headings-font-family;
+	font-weight: 700;
+	line-height: 1.1;
 }
 
 .editor-styles-wrapper .c9-heading .h1,
@@ -35,12 +42,12 @@
 .editor-styles-wrapper .c9-heading h4,
 .editor-styles-wrapper .c9-heading h5,
 .editor-styles-wrapper .c9-heading h6 {
-    line-height: 1.1;
+	line-height: 1.1;
 }
 
 .editor-styles-wrapper .c9-cta .c9-sh p,
 .editor-styles-wrapper .c9-heading .c9-h .text-muted {
-    font-family: $font-family-sans-serif !important;
+	font-family: $font-family-sans-serif !important;
 }
 
 .editor-styles-wrapper .mce-content-body.button,
@@ -49,17 +56,17 @@
 .editor-styles-wrapper .button-primary,
 .editor-styles-wrapper .mce-content-body.button,
 .c9-block-cta .c9-cta-button a {
-    text-transform: uppercase;
-    font-weight: 700;
-    font-family: $font-family-base;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: $font-family-base;
 }
 
 .editor-styles-wrapper .button:hover,
 .editor-styles-wrapper .button-primary:hover,
 .editor-styles-wrapper .mce-content-body.button:hover,
 .editor-styles-wrapper .wp-block-button__link:hover {
-    opacity: 0.8;
-    color: $light;
+	opacity: 0.8;
+	color: $light;
 }
 
 .editor-styles-wrapper p,
@@ -74,15 +81,15 @@
 .editor-styles-wrapper ol li,
 .editor-styles-wrapper .wp-block-pullquote,
 .editor-styles-wrapper .wp-block-pullquote blockquote p {
-    font-family: $font-family-base;
+	font-family: $font-family-base;
 }
 
 .editor-styles-wrapper .c9-cta .wp-block-button__link {
-    font-size: 12px;
+	font-size: 12px;
 }
 
 /* consider migrating this to customer-editor style in theme base */
 div[data-type="c9-blocks/column-container"] .editor-block-list__block-edit.block-editor-block-list__block-edit .c9-column-innner .wp-block[data-type="core/paragraph"]>.editor-block-list__block-edit.block-editor-block-list__block-edit {
-    margin-bottom: 15px;
-    margin-top: 15px;
+	margin-bottom: 15px;
+	margin-top: 15px;
 }
