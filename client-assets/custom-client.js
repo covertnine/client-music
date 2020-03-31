@@ -1,25 +1,27 @@
 jQuery(document).ready(function() {
   (function($) {
-    $("body").on(
-      "click",
-      ".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']",
-      function(event) {
-        event.preventDefault();
+    if (jQuery("body.home").length) {
+      $("body").on(
+        "click",
+        ".nav-link[href^='/#'], .scroll-me a[href^='/#'], .dropdown-item[href^='/#']",
+        function(event) {
+          event.preventDefault();
 
-        //what link was clicked
-        var sectionLink = $(event.target).attr("href");
-        var anchorID = sectionLink.substr(1);
+          //what link was clicked
+          var sectionLink = $(event.target).attr("href");
+          var anchorID = sectionLink.substr(1);
 
-        // scroll to that part of the page
-        gsap.to(window, {
-          duration: 2,
-          scrollTo: { y: anchorID, offsetY: 55 },
-          ease: Power2.easeOut
-        });
+          // scroll to that part of the page
+          gsap.to(window, {
+            duration: 2,
+            scrollTo: { y: anchorID, offsetY: 55 },
+            ease: Power2.easeOut
+          });
 
-        $(".navbar-collapse").toggleClass("show");
-      }
-    );
+          $(".navbar-collapse").toggleClass("show");
+        }
+      );
+    } //end seeing if they're on the home page.
   })(jQuery);
 });
 
