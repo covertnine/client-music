@@ -39,3 +39,15 @@ body .editor-styles-wrapper {
 	font-family: $font-family-sans-serif;
 	font-weight: 300;
 }
+
+/* woocommerce */
+.wp-block[data-type="^woocommerce/"] .wc-block-grid__products .wc-block-grid__product,
+.edit-post-visual-editor .editor-block-list__block .wc-block-grid__product-title,
+.editor-styles-wrapper .wc-block-grid__product-title,
+.wc-block-grid__product-title {
+	font-size: 16px;
+}
+
+.editor-styles-wrapper .wp-block[data-type^="woocommerce/"] .wc-block-grid__products .wc-block-grid__product a:not(.wp-block-button__link) {
+	text-decoration: none;
+}

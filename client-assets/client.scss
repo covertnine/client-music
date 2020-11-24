@@ -3,10 +3,6 @@
 /****************************************************************************************/
 @import "_client_variables";
 
-.entry-content a {
-	text-decoration: underline;
-}
-
 a:hover {
 	color: $primary;
 }
@@ -299,6 +295,12 @@ a:hover {
 	font-weight: 900;
 }
 
+.c9-heading .c9-h,
+.c9-heading .c9-sh,
+.c9-heading .c9-txl {
+	letter-spacing: -.5px;
+}
+
 .single-post .c9 h1 {
 	text-transform: none;
 	font-weight: $headings-font-weight;
@@ -363,7 +365,7 @@ p.wp-block-subhead,
 	color: $primary !important;
 }
 
-.entry-content a:hover {
+.entry-content a:not(.wp-block-button__link):hover {
 	color: $link-hover-color;
 }
 
@@ -525,6 +527,7 @@ p.wp-block-subhead,
 	margin: 10px 0px;
 }
 
+.editor-styles-wrapper .is-root-container ul[data-type="core/list"] li:before,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before,
 .editor-styles-wrapper .wp-block-latest-posts li:before,
 .entry-content ul:not(.blocks-gallery-grid) li:before {
@@ -536,6 +539,9 @@ p.wp-block-subhead,
 	margin-right: 14px;
 }
 
+.entry-content>ul:not(.blocks-gallery-grid),
+.entry-content>ul:not(.blocks-gallery-grid) li,
+.editor-styles-wrapper .is-root-container ul[data-type="core/list"],
 .entry-content ul:not(.blocks-gallery-grid),
 .editor-styles-wrapper ul,
 .editor-styles-wrapper ul li {
@@ -710,16 +716,26 @@ p.wp-block-subhead,
 	opacity: .8;
 }
 
+.btn:focus,
+.entry-content button:focus,
+.wp-block-button a:focus,
+.wp-block-button__link:focus,
+.wp-block-file__button:focus {
+	box-shadow: -1px -1px 20px -5px rgba(90, 89, 89, 0.75);
+	-webkit-box-shadow: -1px -1px 20px -5px rgba(90, 89, 89, 0.75);
+	-moz-box-shadow: -1px -1px 20px -5px rgba(90, 89, 89, 0.75);
+}
+
 .btn-secondary,
 .c9 .entry-content .btn-secondary {
 	background-color: $secondary;
 }
 
-.is-style-outline .wp-block-button__link,
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
-.wp-block-button__link.c9-button-shape-outline {
-	color: $light;
-	border: 2px solid $light;
+.wp-block-button.is-style-outline .wp-block-button__link:not([href]):not([tabindex]),
+.wp-block-button__link.c9-button-shape-outline,
+.is-style-outline .wp-block-button__link {
+	border: 2px solid;
 }
 
 .c9 button:hover,
@@ -741,21 +757,6 @@ p.wp-block-subhead,
 
 .woocommerce-page .site-main {
 	margin: 0px auto;
-}
-
-.wc-block-grid__product-title,
-.woocommerce-Price-amount,
-.woocommerce-message,
-.woocommerce-info,
-.woocommerce-notice,
-.woocommerce-breadcrumb,
-.woocommerce-result-count,
-.products,
-.c9.woocommerce nav.woocommerce-pagination ul li span,
-.c9.woocommerce nav.woocommerce-pagination ul li .page-numbers,
-.quantity input,
-.select2-results__option {
-	font-size: 16px;
 }
 
 /* product grid link titles */
@@ -834,7 +835,6 @@ p.wp-block-subhead,
 .c9 .entry-content .wp-block-button__link:focus,
 .c9 .entry-content .wp-block-button__link:hover,
 .c9 .entry-content .wp-block-button__link:visited {
-	color: #fff;
 	white-space: nowrap;
 }
 
@@ -1400,10 +1400,9 @@ p.demo_store {
 /****************************************************************************************/
 /* Footer */
 /****************************************************************************************/
-/* transparent footer with an image */
-#wrapper-footer,
-#wrapper-footer-full {
-	background-color: transparent;
+.site :focus,
+.site button:focus {
+	outline-color: $gray-900;
 }
 
 .footer-entirety {
@@ -1449,6 +1448,7 @@ p.demo_store {
 .widget_nav_menu .menu-item a:hover,
 .widget_recent_entries a:hover {
 	color: $gray-700;
+	text-decoration: underline;
 }
 
 .footer-entirety .widget-title {
