@@ -1,5 +1,8 @@
 @import "../../assets/styles/theme/theme_variables";
 
+/*
+Use the following with the build tools to generate new client styles for fonts
+Remove inherit font settings on the $font-family variables
 @import url("https://use.typekit.net/att2ajc.css");
 
 :root {
@@ -8,24 +11,15 @@
         times,
         serif;
 }
+*/
 
 // Typography
-$headings-font-family: futura-pt,
-"helvetica",
-times,
-serif;
-$headings-font-weight: 700;
-
-$font-family-sans-serif: futura-pt,
-sans-serif;
-$font-family-base: futura-pt,
-"helvetica",
-times,
-serif;
+$headings-font-family: inherit;
+$font-family-sans-serif: inherit;
+$font-family-base: inherit;
 
 $line-height-base: 1.6;
-
-$gray-300: $gray-500;
+$headings-font-weight: 700;
 $font-weight-base: 400;
 $font-weight-normal: $font-weight-base;
 $font-weight-bold: 700;
@@ -48,5 +42,5 @@ $gray-600: rgba(151, 151, 151, 1);
 $gray-700: #2b2b2b;
 $gray-800: #767676;
 $gray-900: #4a4a4a;
-
+$gray-300: $gray-500;
 $body-color: #4a4a4a;
