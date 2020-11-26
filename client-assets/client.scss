@@ -30,6 +30,8 @@ a:hover {
 
 .header-navbar .navbar-toggler:hover,
 .header-navbar .nav-search .btn-nav-search:hover,
+.header-navbar .nav-search .btn-nav-search:hover .fa-search,
+.header-navbar .navbar.navbar-light .nav-link:hover .fa,
 .header-navbar .navbar-toggler:focus,
 .header-navbar .nav-search .btn-nav-search:focus {
 	color: $gray-500;
@@ -57,13 +59,9 @@ a:hover {
 	border-left: none;
 }
 
-.header-navbar .navbar .nav .dropdown-toggle::after {
-	content: ' \f0e7';
-	font-family: FontAwesome;
-	margin: 0px;
-	padding: 1px 0px 0px 2px;
-	border: none;
-	font-size: 10px;
+.is-style-outline .wp-block-button__link,
+.wp-block-button__link.is-style-outline {
+	color: inherit;
 }
 
 .header-navbar .navbar .nav .nav-item,
