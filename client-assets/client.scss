@@ -23,11 +23,6 @@ a:hover {
 	background-color: transparent;
 }
 
-/* hide search */
-.nav-item.search {
-	display: none !important;
-}
-
 .header-navbar .navbar-toggler,
 .header-navbar .nav-search .btn-nav-search {
 	color: $light;
@@ -51,6 +46,10 @@ a:hover {
 
 .header-navbar .justify-content-center {
 	justify-content: flex-end !important;
+}
+
+.header-navbar .nav .search .nav-link .fa-search {
+	font-size: 14px;
 }
 
 .dropdown-toggle::after {
@@ -144,6 +143,20 @@ a:hover {
 .header-navbar .nav .nav-item .dropdown-menu .dropdown-item:hover {
 	background-color: $dark;
 	color: $light;
+}
+
+.nav-search,
+.nav-toggle {
+	display: inline-block;
+	line-height: 2;
+}
+
+.navbar-toggler[aria-expanded="true"] .fa-bars:before {
+	content: '\f00d';
+}
+
+.nav-search {
+	margin-right: 10px;
 }
 
 @-webkit-keyframes fadeInFromNone {
