@@ -81,25 +81,6 @@ a:hover {
 	margin: 0px 6px;
 }
 
-.header-navbar .navbar .nav>.nav-item>.nav-link:before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	left: 0;
-	right: 100%;
-	bottom: 0;
-	background: $light;
-	height: 4px;
-	transition-property: right;
-	transition-duration: 0.3s;
-	transition-timing-function: ease-out;
-}
-
-.header-navbar .navbar .nav>.nav-item:hover>.nav-link:before,
-.header-navbar .navbar .nav>.nav-item.nav-highlight>.nav-link:before {
-	right: 0;
-}
-
 .header-navbar .navbar .nav .search .nav-search a {
 	font-size: 14px;
 }
@@ -113,6 +94,25 @@ a:hover {
 	position: relative;
 	letter-spacing: 1px;
 	padding: 14px 0px;
+}
+
+.header-navbar .nav-item .nav-highlight {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background: $light;
+	height: 4px;
+	transition: right .3s;
+	transition-timing-function: ease-out;
+}
+
+.header-navbar .nav-item>.nav-link:hover>.nav-highlight,
+.header-navbar .nav-item>.nav-link:focus>.nav-highlight,
+.header-navbar .nav-item:focus>.nav-link>.nav-highlight {
+	right: 0% !important;
 }
 
 .header-navbar .navbar .nav .nav-item .dropdown-item {
