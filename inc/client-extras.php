@@ -32,7 +32,7 @@ function c9music_nav_custom_fields($item_id, $item)
 
 		<input type="hidden" class="nav-menu-id" value="<?php echo $item_id; ?>" />
 		<select name="c9music_custom_menu_meta[<?php echo $item_id; ?>]" id="custom-menu-meta-for-<?php echo $item_id; ?>">
-			<option value="" <?php if ((esc_attr($c9music_custom_menu_meta) == "") || (empty($c9music_custom_menu_meta))) echo " selected"; ?>>None</option>
+			<option value="" <?php if ((esc_attr($c9music_custom_menu_meta) == "") || (empty($c9music_custom_menu_meta))) echo " selected"; ?>><?php esc_html_e('None', 'c9-music'); ?></option>
 			<option value="c9-icon-spotify" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-spotify") echo " selected"; ?>><?php esc_html_e("Spotify Icon", 'c9-music'); ?></option>
 			<option value="c9-icon-instagram" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-instagram") echo " selected"; ?>><?php esc_html_e("Instagram Icon", 'c9-music'); ?></option>
 			<option value="c9-icon-soundcloud" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-soundcloud") echo " selected"; ?>><?php esc_html_e("SoundCloud Icon", 'c9-music'); ?></option>

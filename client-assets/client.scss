@@ -156,6 +156,10 @@ a:hover {
 	margin-right: 10px;
 }
 
+.has-c9-icon .nav-link-text {
+	display: none;
+}
+
 @-webkit-keyframes fadeInFromNone {
 	0% {
 		display: none;

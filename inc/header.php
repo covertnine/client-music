@@ -58,7 +58,8 @@
 					'menu_class'      => 'navbar-nav nav nav-fill justify-content-between',
 					'fallback_cb'     => '',
 					'menu_id'         => 'main-menu',
-					'link_after'	  => '<span class="nav-highlight"></span>',
+					'link_before'	  => '<span class="nav-link-text">',
+					'link_after'	  => '</span><span class="nav-highlight"></span>',
 					'depth'           => 2,
 					'walker'          => new c9_WP_Bootstrap_Navwalker(),
 				)
