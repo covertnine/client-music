@@ -59,7 +59,6 @@ a:hover {
 	border-left: none;
 }
 
-.is-style-outline .wp-block-button__link,
 .wp-block-button__link.is-style-outline {
 	color: inherit;
 }
@@ -634,20 +633,59 @@ p.wp-block-subhead,
 	color: $gray-900;
 }
 
-.has-color-red-color {
-	color: $primary !important;
+.has-c-9-music-red-color {
+	color: #f90000 !important;
 }
 
-.has-color-white-color {
+.has-c-9-music-red-background-color {
+	background-color: #f90000 !important;
+}
+
+.has-color-white-color,
+.has-c-9-music-white-color {
 	color: $light !important;
 }
 
-.has-color-black-color {
+.has-c-9-music-white-background-color,
+.has-covertnine-palette-1-background-color {
+	background-color: $light !important;
+}
+
+.has-color-black-color,
+.has-c-9-music-black-color {
 	color: $dark !important;
+}
+
+.has-c-9-music-black-background-color {
+	background-color: $dark !important;
 }
 
 .has-color-gray-color {
 	color: $gray-900 !important;
+}
+
+.has-c-9-music-dark-gray-color {
+	color: #2f2f2f !important;
+}
+
+.has-c-9-music-dark-gray-background-color {
+	background-color: #2f2f2f !important;
+}
+
+.has-c-9-music-faded-red-color {
+	color: #a74e4e !important;
+}
+
+.has-c-9-music-faded-red-background-color {
+	background-color: #a74e4e !important;
+}
+
+.has-c-9-music-mint-green-color {
+	color: #4caab1 !important;
+}
+
+.has-c-9-music-mint-green-background-color {
+	background-color: #4caab1 !important;
 }
 
 .bg-primary {
@@ -676,10 +714,6 @@ p.wp-block-subhead,
 
 .bg-dark {
 	background-color: $dark;
-}
-
-.has-covertnine-palette-1-background-color {
-	background-color: #fff;
 }
 
 /****************************************************************************************/

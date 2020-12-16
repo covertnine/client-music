@@ -1,52 +1,37 @@
 <?php
-// Band Client Functions
 
-/****************************************************************************************/
-/***************************** load client scripts for frontend styling
-/****************************************************************************************/
-if (!function_exists('client_scripts')) {
-	/**
-	 * Load theme's JavaScript and CSS sources.
-	 */
-	function client_scripts()
-	{
+/**
+ * Client-specific functionality
+ *
+ * @package c9-music
+ */
 
-		wp_enqueue_style('client-styles', get_template_directory_uri() . '/client/client-assets/dist/client.min.css', array('c9-styles'));
-		wp_enqueue_script('client-scripts', get_template_directory_uri() . '/client/client-assets/custom-client.js', array('jquery'), '', true);
-	}
-} // endif function_exists( 'client_scripts' ).
-add_action('wp_enqueue_scripts', 'client_scripts', 99);
+/**
+ * Adds additional theme settings to customizer
+ */
+require_once "client-admin-settings.php";
 
-/* add client compiled files to gutenberg editor */
-if (!function_exists('c9_client_editor_style')) {
-	function c9_client_editor_style()
-	{
+/**
+ * Sets up colors and custom styles for core blocks
+ */
+require_once "client-setup.php";
 
-		wp_enqueue_style('c9-client-styles', get_template_directory_uri() . '/client/client-assets/dist/client.css');
-		wp_enqueue_style('c9-client-editor-styles', get_template_directory_uri() . '/client/client-assets/dist/client-editor.min.css', 99999);
-	}
-	add_action('enqueue_block_editor_assets', 'c9_client_editor_style', 99999999);
-} //end if function exists
+/**
+ * Client frontend styles and scripts
+ */
+require_once "client-enqueue.php";
 
+/**
+ * Client editor styles and scripts
+ */
+require_once "client-editor.php";
 
-add_action('after_setup_theme', 'c9_client_setup');
-if (!function_exists('c9_client_setup')) {
+/**
+ * Client WooCommerce
+ */
+require_once "client-woocommerce.php";
 
-	function c9_client_setup()
-	{
-		/*
-		 * Enable support for Post Formats.
-		 * See http://codex.wordpress.org/Post_Formats
-		 */
-		add_theme_support('post-formats', array(
-			'video',
-			'quote'
-		));
-	}
-}
-
-/****************************************************************************************/
-/* WooCommerce */
-/****************************************************************************************/
-include("woocommerce-functions.php");
-/****************************************************************************************/
+/**
+ * Client Extra Functions
+ */
+require_once "client-extras.php";

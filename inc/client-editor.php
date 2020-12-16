@@ -3,7 +3,7 @@
 /**
  * Client-specific scripts for WordPress block editor
  *
- * @package c9-togo
+ * @package c9-music
  */
 
 /* add client compiled files to gutenberg editor */

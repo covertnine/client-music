@@ -5,7 +5,7 @@
  * Add fields and configure admin settings API.
  *
  * @since   2.1.9
- * @package c9-togo
+ * @package c9-music
  */
 
 /**

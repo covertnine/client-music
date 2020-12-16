@@ -3,7 +3,7 @@
 /**
  * Client-specific scripts for frontend
  *
- * @package c9-togo
+ * @package c9-music
  */
 
 if (!function_exists('c9music_client_scripts')) {
@@ -13,7 +13,7 @@ if (!function_exists('c9music_client_scripts')) {
 	function c9music_client_scripts()
 	{
 
-		$c9_default_font = get_theme_mod('c9_default_font');
+		$c9_default_font = get_theme_mod('c9_default_font', 'no');
 
 		if ($c9_default_font == 'no') {
 			wp_enqueue_style('c9music-font-default', 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap', array('c9-styles'));

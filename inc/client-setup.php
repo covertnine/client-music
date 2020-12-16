@@ -36,32 +36,32 @@ if (!function_exists('c9_client_setup')) {
 			array(
 				'name' => 'faded-red',
 				'color'    => '#a74e4e',
-				'slug' => 'color-faded-red',
+				'slug' => 'c9music-faded-red',
 			),
 			array(
 				'name' => 'white',
 				'color'    => '#ffffff',
-				'slug' => 'color-white',
+				'slug' => 'c9music-white',
 			),
 			array(
 				'name' => 'black',
 				'color'    => '#000000',
-				'slug'    => 'color-black',
+				'slug'    => 'c9music-black',
 			),
 			array(
 				'name' => 'dark-gray',
 				'color'    => '#2f2f2f',
-				'slug'    => 'color-dark-gray',
+				'slug'    => 'c9music-dark-gray',
 			),
 			array(
 				'name' => 'red',
 				'color'    => '#f90000',
-				'slug'    => 'color-red',
+				'slug'    => 'c9music-red',
 			),
 			array(
 				'name' => 'mint-green',
 				'color'    => '#4caab1',
-				'slug'    => 'color-mint-green',
+				'slug'    => 'c9music-mint-green',
 			),
 		));
 

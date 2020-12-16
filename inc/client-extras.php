@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Client-specific functions for c9-togo
+ * Client-specific functions for c9-music
  *
- * @package c9-togo
+ * @package c9-music
  */
 
 /**
@@ -19,22 +19,26 @@ function c9music_nav_custom_fields($item_id, $item)
 {
 
 	wp_nonce_field('custom_menu_meta_nonce', '_custom_menu_meta_nonce_name');
-	$c9work_custom_menu_meta = get_post_meta($item_id, '_custom_menu_meta', true);
+	$c9music_custom_menu_meta = get_post_meta($item_id, '_custom_menu_meta', true);
 ?>
 
-	<input type="hidden" name="custom-menu-meta-nonce" value="<?php echo wp_create_nonce('c9work_custom_menu_meta'); ?>" />
+	<input type="hidden" name="custom-menu-meta-nonce" value="<?php echo wp_create_nonce('c9music_custom_menu_meta'); ?>" />
 
 	<div class="field-custom_menu_meta description-wide" style="margin: 5px 0;">
 		<label for="custom-menu-meta-for-<?php echo $item_id; ?>">
-			<?php esc_html_e('Navigation Link Style', 'c9-music'); ?>
+			<?php esc_html_e('Icon Options', 'c9-music'); ?>
 		</label>
 		<br />
 
 		<input type="hidden" class="nav-menu-id" value="<?php echo $item_id; ?>" />
-		<select name="c9work_custom_menu_meta[<?php echo $item_id; ?>]" id="custom-menu-meta-for-<?php echo $item_id; ?>">
-			<option value="" <?php if ((esc_attr($c9work_custom_menu_meta) == "") || (empty($c9work_custom_menu_meta))) echo " selected"; ?>>Default</option>
-			<option value="c9-order-now" <?php if (esc_attr($c9work_custom_menu_meta) == "c9-order-now") echo " selected"; ?>><?php esc_html_e("Green Button", 'c9-music'); ?></option>
-			<option value="c9-yellow-btn" <?php if (esc_attr($c9work_custom_menu_meta) == "c9-yellow-btn") echo " selected"; ?>><?php esc_html_e("Yellow Button", 'c9-music'); ?></option>
+		<select name="c9music_custom_menu_meta[<?php echo $item_id; ?>]" id="custom-menu-meta-for-<?php echo $item_id; ?>">
+			<option value="" <?php if ((esc_attr($c9music_custom_menu_meta) == "") || (empty($c9music_custom_menu_meta))) echo " selected"; ?>>None</option>
+			<option value="c9-icon-spotify" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-spotify") echo " selected"; ?>><?php esc_html_e("Spotify Icon", 'c9-music'); ?></option>
+			<option value="c9-icon-instagram" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-instagram") echo " selected"; ?>><?php esc_html_e("Instagram Icon", 'c9-music'); ?></option>
+			<option value="c9-icon-soundcloud" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-soundcloud") echo " selected"; ?>><?php esc_html_e("SoundCloud Icon", 'c9-music'); ?></option>
+			<option value="c9-icon-email" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-email") echo " selected"; ?>><?php esc_html_e("Email Icon", 'c9-music'); ?></option>
+			<option value="c9-icon-facebook" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-facebook") echo " selected"; ?>><?php esc_html_e("Facebook Icon", 'c9-music'); ?></option>
+			<option value="c9-icon-youtube" <?php if (esc_attr($c9music_custom_menu_meta) == "c9-icon-youtube") echo " selected"; ?>><?php esc_html_e("YouTube Icon", 'c9-music'); ?></option>
 		</select>
 
 
@@ -59,8 +63,8 @@ function c9music_nav_update($menu_id, $menu_item_db_id)
 		return $menu_id;
 	}
 
-	if (isset($_POST['c9work_custom_menu_meta'][$menu_item_db_id])) {
-		$sanitized_data = esc_attr($_POST['c9work_custom_menu_meta'][$menu_item_db_id]);
+	if (isset($_POST['c9music_custom_menu_meta'][$menu_item_db_id])) {
+		$sanitized_data = esc_attr($_POST['c9music_custom_menu_meta'][$menu_item_db_id]);
 		update_post_meta($menu_item_db_id, '_custom_menu_meta', $sanitized_data);
 	} else {
 		delete_post_meta($menu_item_db_id, '_custom_menu_meta');
@@ -81,10 +85,11 @@ function c9music_custom_menu_class($classes, $item)
 
 	if (is_object($item) && isset($item->ID)) {
 
-		$c9work_custom_menu_meta = get_post_meta($item->ID, '_custom_menu_meta', true);
+		$c9music_custom_menu_meta = get_post_meta($item->ID, '_custom_menu_meta', true);
 
-		if (!empty($c9work_custom_menu_meta)) {
-			$classes[] = $c9work_custom_menu_meta;
+		if (!empty($c9music_custom_menu_meta)) {
+			$classes[] = 'has-c9-icon';
+			$classes[] = $c9music_custom_menu_meta;
 		}
 	}
 	return $classes;
