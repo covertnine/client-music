@@ -427,7 +427,8 @@ p.wp-block-subhead,
 .c9-sh,
 .c9-heading .c9-h .text-muted,
 .c9-heading .c9-sh .text-muted,
-.c9-heading .c9-txl .text-muted {
+.c9-heading .c9-txl .text-muted,
+.c9 .c9-sh {
 	font-weight: 200;
 }
 
@@ -459,7 +460,7 @@ p.wp-block-subhead,
 	margin-top: 20px;
 }
 
-.entry-content a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth),
+.entry-content a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth):not(.nav-link),
 .entry-title a {
 	color: $link-color;
 }
@@ -632,6 +633,14 @@ p.wp-block-subhead,
 	letter-spacing: 1px;
 }
 
+.c9-horizontal-tabs .nav-tabs .nav-link.active {
+	background-color: $light;
+}
+
+.c9-horizontal-tabs .nav-tabs a:not(.active):hover {
+	background-color: $gray-200;
+}
+
 .editor-styles-wrapper .c9-vertical-tabs .nav-pills .nav-link.active,
 .c9 .c9-vertical-tabs .nav-pills .nav-link.active {
 	background-color: #f1f1f1;
@@ -712,17 +721,6 @@ p.wp-block-subhead,
 }
 
 /* editor block quote style */
-.editor-styles-wrapper blockquote,
-.entry-content blockquote,
-.wp-block-quote:not(.is-large):not(.is-style-large) {
-	border-left-color: $primary;
-}
-
-.editor-styles-wrapper blockquote:before,
-.entry-content blockquote:before {
-	color: $primary;
-}
-
 .wp-block-quote.light-quote p {
 	color: $light;
 }
