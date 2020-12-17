@@ -2,7 +2,7 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light">
 
-		<div class="container">
+		<div class="container-fluid">
 			<?php
 
 			if (has_custom_logo()) {
@@ -21,17 +21,19 @@
 				<?php
 				}
 				?>
-				<div class="nav-order d-inline-block d-lg-none">
+				<div class="nav-order">
 					<?php
 					if (defined('WC_VERSION')) { //show cart contents if woo is active
-						$count = WC()->cart->get_cart_contents_count();
+						if (!get_theme_mod('c9_header_hide_cart', false)) {
+							$count = WC()->cart->get_cart_contents_count();
 
-						//if there are items in the cart, put a number in front of the icon
-						if ($count != 0) {
-							echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="' . esc_attr__('Shopping Cart', 'c9-togo') . '" class="nav-link nav-shop-link"><span class="sr-only">' . esc_html__('View Cart', 'c9-togo') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
-						} else { //if not just put in an icon
-							echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="' . esc_attr__('Shopping Cart', 'c9-togo') . '" class="nav-link nav-shop-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . esc_html__('View Cart', 'c9-togo') . '</span></a></div>';
-						} //end count check
+							//if there are items in the cart, put a number in front of the icon
+							if ($count != 0) {
+								echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="' . esc_attr__('Shopping Cart', 'c9-music') . '" class="nav-link nav-shop-link"><span class="sr-only">' . esc_html__('View Cart', 'c9-music') . '</span> <i class="fa fa-shopping-cart fa-md"></i><span class="count">' . $count . '</span></a></div>';
+							} else { //if not just put in an icon
+								echo '<div class="nav-woocommerce" itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement"><a href="' . esc_url(wc_get_cart_url()) . '" title="' . esc_attr__('Shopping Cart', 'c9-music') . '" class="nav-link nav-shop-link"><i class="fa fa-shopping-cart fa-md"></i> <span class="sr-only">' . esc_html__('View Cart', 'c9-music') . '</span></a></div>';
+							} //end count check
+						} // end hide cart setting check
 					} //end if woocommerce is active
 					?>
 				</div>
@@ -60,7 +62,7 @@
 					'menu_id'         => 'main-menu',
 					'link_before'	  => '<span class="nav-link-text">',
 					'link_after'	  => '</span><span class="nav-highlight"></span>',
-					'depth'           => 2,
+					'depth'           => 3,
 					'walker'          => new c9_WP_Bootstrap_Navwalker(),
 				)
 			);
