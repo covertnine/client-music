@@ -203,6 +203,13 @@ a:hover {
 	display: none;
 }
 
+@media only screen and (max-width: 991px) {
+	.has-c9-icon .nav-link-text {
+		display: inline-block;
+		margin-left: 6px;
+	}
+}
+
 .has-c9-icon .nav-link:before {
 	font-family: 'fontawesome';
 	font-size: 14px;

@@ -64,7 +64,8 @@ if (!function_exists('c9music_customize_register')) {
 				$wp_customize,
 				'c9music_nav_mobile_menu',
 				array(
-					'label'      => esc_html__('Mobile Top Navigation Background', 'c9-music'),
+					'label'      => esc_html__('Mobile Top Navigation Dropdown Background', 'c9-music'),
+					'description'		=> esc_html__('Background color of the navigation that collapses to a single column on mobile.', 'c9-music'),
 					'section'    => 'colors',
 					'settings'	 => 'c9music_nav_mobile_menu',
 					'priority'	 => 10
@@ -347,7 +348,9 @@ function c9_music_custom_css_output()
 
 	if (!empty($c9music_nav_mobile_menu)) {
 		$c9_music_custom_css .=  '@media only screen and (max-width: 991px) {
-			.header-navbar .navbar-small { background-color: ' . $c9music_nav_mobile_menu . ';}}';
+			.header-navbar .navbar-small,
+			.header-navbar .navbar-collapse,
+			.header-navbar .navbar-collapse.show { background-color: ' . $c9music_nav_mobile_menu . ';}}';
 	}
 
 	if (!empty($c9music_nav_menu)) {
@@ -398,7 +401,14 @@ function c9_music_custom_css_output()
 		.navbar-light .navbar-nav .nav-link:focus,
 		.navbar-light .navbar-nav .nav-link:hover,
 		.header-navbar .navbar:not(.navbar-small) .nav .nav-item.active .nav-link:hover,
-		.header-navbar .navbar:not(.navbar-small) .nav .nav-item .nav-link:hover {color: ' . $c9music_nav_link_hover . ';}';
+		.header-navbar .navbar:not(.navbar-small) .nav .nav-item .nav-link:hover,
+		.header-navbar .navbar .nav>.nav-item .nav-link:hover,
+		.header-navbar .navbar.navbar-small .nav .nav-item.active>.nav-link:hover,
+		.header-navbar .nav-search .btn-nav-search:focus,
+		.header-navbar .nav-search .btn-nav-search:hover,
+		.header-navbar .nav-search .btn-nav-search:hover .fa-search,
+		.header-navbar .navbar-toggler:focus, .header-navbar .navbar-toggler:hover,
+		.header-navbar .navbar.navbar-light .nav-link:hover .fa {color: ' . $c9music_nav_link_hover . ';}';
 	}
 
 	if (!empty($c9music_nav_dropdown_link)) {
