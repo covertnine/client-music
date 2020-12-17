@@ -22,6 +22,30 @@ if (!function_exists('c9music_customize_register')) {
 	function c9music_customize_register($wp_customize)
 	{
 
+		// for hover colors of links in entry-content
+		$wp_customize->add_setting(
+			'c9music_link_hover',
+			array(
+				'default'           => '',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'transport'         => 'refresh',
+				'type' 				=> 'theme_mod',
+				'capability' 		=> 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'c9music_link_hover',
+				array(
+					'label'      => esc_html__('Body Link Hover', 'c9-music'),
+					'section'    => 'colors',
+					'settings'	 => 'c9music_link_hover',
+					'priority'	 => 10
+				)
+			)
+		);
 
 		$wp_customize->add_setting(
 			'c9music_nav_menu',
@@ -212,31 +236,6 @@ if (!function_exists('c9music_customize_register')) {
 					'label'      => esc_html__('Top Navigation Dropdown Link Active/Hover', 'c9-music'),
 					'section'    => 'colors',
 					'settings'	 => 'c9music_nav_dropdown_link_hover',
-					'priority'	 => 10
-				)
-			)
-		);
-
-		// for hover colors of links in entry-content
-		$wp_customize->add_setting(
-			'c9music_link_hover',
-			array(
-				'default'           => '',
-				'sanitize_callback' => 'sanitize_hex_color',
-				'transport'         => 'refresh',
-				'type' 				=> 'theme_mod',
-				'capability' 		=> 'edit_theme_options',
-			)
-		);
-
-		$wp_customize->add_control(
-			new WP_Customize_Color_Control(
-				$wp_customize,
-				'c9music_link_hover',
-				array(
-					'label'      => esc_html__('Body Link Hover', 'c9-music'),
-					'section'    => 'colors',
-					'settings'	 => 'c9music_link_hover',
 					'priority'	 => 10
 				)
 			)
