@@ -460,7 +460,7 @@ p.wp-block-subhead,
 	margin-top: 20px;
 }
 
-.entry-content a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth):not(.nav-link),
+.entry-content p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth):not(.nav-link),
 .entry-title a {
 	color: $link-color;
 }
@@ -609,7 +609,7 @@ p.wp-block-subhead,
 }
 
 /****************************************************************************************/
-/* WordPress Gutenberg Block Specifics */
+/* WordPress Gutenberg Block Specifics + Core Blocks */
 /****************************************************************************************/
 
 /* invert link colors on posts grid */
@@ -629,34 +629,40 @@ p.wp-block-subhead,
 .editor-styles-wrapper .c9-vertical-tabs .nav-pills .nav-link,
 .c9-vertical-tabs .nav-pills .nav-link {
 	text-transform: uppercase;
-	font-weight: 200;
+	font-weight: 700;
 	letter-spacing: 1px;
 }
 
-.c9-horizontal-tabs .nav-tabs .nav-link.active {
+.c9-vertical-tabs .tab-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.c9-horizontal-tabs .nav-tabs .nav-link.active,
+.is-root-container .c9-horizontal-tabs .nav-tabs .nav-link.active {
 	background-color: $light;
 }
 
 .c9-horizontal-tabs .nav-tabs a:not(.active):hover {
-	background-color: $gray-200;
+	background-color: $gray-100;
 }
 
 .editor-styles-wrapper .c9-vertical-tabs .nav-pills .nav-link.active,
 .c9 .c9-vertical-tabs .nav-pills .nav-link.active {
-	background-color: #f1f1f1;
-	color: #fff;
+	background-color: $gray-100;
+	color: $link-color;
 }
 
 /* list items */
 .entry-content ol:not(.wp-block-gallery) li,
-.entry-content ul:not(.blocks-gallery-grid) li {
+.entry-content ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li {
 	margin: 10px 0px;
 }
 
 .editor-styles-wrapper .is-root-container ul[data-type="core/list"] li:before,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before,
 .editor-styles-wrapper .wp-block-latest-posts li:before,
-.entry-content ul:not(.blocks-gallery-grid) li:before {
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-social-links) li:before {
 	font-size: 14px;
 	content: "\f18e";
 	font-family: fontawesome;
@@ -729,6 +735,16 @@ p.wp-block-subhead,
 .c9 .entry-content .wp-block-gallery .blocks-gallery-grid {
 	margin: 20px 0px;
 	padding-left: 0px;
+}
+
+.c9 .wp-block-social-links>.wp-social-link.wp-block-social-link>a,
+.c9 .wp-block-social-links>.wp-block-social-link>a {
+	color: $light;
+}
+
+.c9 .wp-block-social-links>.wp-social-link>a:hover,
+.c9 .wp-block-social-links>.wp-social-link>a:focus {
+	color: $gray-200;
 }
 
 /****************************************************************************************/
