@@ -18,7 +18,7 @@ p {
 .entry-content p.has-normal-font-size,
 .entry-content p.has-regular-font-size,
 .entry-content p.has-small-font-size {
-	line-height: 1.3
+	line-height: 1.6;
 }
 
 .site-main {
@@ -575,7 +575,7 @@ p.wp-block-subhead,
 
 .i-tag:hover,
 .tags-links a:hover {
-	color: $gray-500;
+	color: $dark;
 }
 
 .i-tag:before,
@@ -633,8 +633,15 @@ p.wp-block-subhead,
 	background-color: $light;
 	overflow-y: scroll;
 	max-height: calc(100vh - 108px);
-	-ms-scroll-snap-type: y mandatory;
-	scroll-snap-type: y mandatory;
+	-ms-scroll-snap-type: y proximity;
+	scroll-snap-type: y proximity;
+}
+
+.c9-blog-releases .c9-blog-posts .entry-article .entry-image {
+	min-width: 100%;
+	height: auto;
+	background-color: #ccc;
+	border: .5px solid $gray-200;
 }
 
 .c9-blog-releases .c9-blog-posts .entry-article {
@@ -643,6 +650,33 @@ p.wp-block-subhead,
 	align-items: center;
 	justify-content: center;
 	scroll-snap-align: start;
+}
+
+.c9-blog-releases .c9-blog-posts .entry-article .post-content {
+	display: none;
+}
+
+.c9-blog-releases .c9-blog-posts .entry-article .post {
+	position: relative;
+}
+
+.c9-blog-posts .entry-footer {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	text-align: right;
+}
+
+.c9-blog-posts .entry-footer .cat-links,
+.c9-blog-posts .entry-footer .tags-links {
+	visibility: hidden;
+}
+
+.c9-blog-posts .entry-footer .cat-links a,
+.c9-blog-posts .entry-footer .tags-links a {
+	visibility: visible;
+	display: block;
+	padding: 0;
 }
 
 @media only screen and (max-width: 414px) {
@@ -657,6 +691,41 @@ p.wp-block-subhead,
 
 	.c9-blog-releases .c9-blog-header {
 		min-height: 50vh;
+	}
+}
+
+.c9-blog-releases .c9-blog-posts figure {
+	position: relative;
+	overflow: hidden;
+}
+
+.c9-blog-releases .c9-blog-posts figure::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+	transform: skewX(-25deg);
+}
+
+.c9-blog-releases .c9-blog-posts figure:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;
 	}
 }
 
