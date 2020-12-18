@@ -7,6 +7,20 @@ a:hover {
 	color: $primary;
 }
 
+p {
+	font-size: 1.6em;
+}
+
+.entry-content p.has-huge-font-size,
+.entry-content p.has-large-font-size,
+.entry-content p.has-larger-font-size,
+.entry-content p.has-medium-font-size,
+.entry-content p.has-normal-font-size,
+.entry-content p.has-regular-font-size,
+.entry-content p.has-small-font-size {
+	line-height: 1.3
+}
+
 .site-main {
 	-webkit-animation-duration: .38s;
 	animation-duration: .38s;
@@ -19,6 +33,10 @@ a:hover {
 /****************************************************************************************/
 /* C9 Music Nav header */
 /****************************************************************************************/
+.header-navbar {
+	min-height: 45px;
+}
+
 .header-navbar .navbar {
 	background-color: transparent;
 }
@@ -45,6 +63,10 @@ a:hover {
 .error404 .header-navbar,
 .search .header-navbar {
 	background-color: $primary;
+}
+
+.navbar-small .header-navbar.jumpfix {
+	min-height: 45px;
 }
 
 .header-navbar .justify-content-center {
@@ -456,8 +478,12 @@ p.wp-block-subhead,
 	font-family: $font-family-base;
 	padding: 16px 55px;
 	font-size: 1.2em;
-	border-radius: 34px;
 	margin-top: 20px;
+}
+
+#fullscreensearch input[type=search] {
+	border: 1px solid $gray-200;
+	box-shadow: 0.5px 0.866px 4px rgba(61, 61, 61, 0.603);
 }
 
 .entry-content p a:not(.wp-block-button__link):not(.nav-tabs):not([class|=c9-share]):not(.c9-smooth):not(.nav-link),
@@ -562,10 +588,76 @@ p.wp-block-subhead,
 }
 
 /****************************************************************************************/
-/* blog index */
+/* index, posts, blog index */
 /****************************************************************************************/
-.container-posts {
-	margin-top: 3em;
+
+.c9-blog-releases {
+	display: -ms-flex;
+	display: flex;
+	position: relative;
+	overflow: visible;
+	margin-top: 1.5em;
+}
+
+.c9-blog-releases .c9-blog-header {
+	flex: 0 0 100%;
+	max-width: 100%;
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 415px) {
+	.c9-blog-releases .c9-blog-header {
+		flex: 0 0 50%;
+		max-width: 50%;
+		min-height: calc(70vh - 108px);
+		margin-right: 2em;
+		margin-bottom: 0;
+	}
+}
+
+.c9-blog-info {
+	border: 1px solid $gray-200;
+	box-shadow: 0.5px 0.866px 4px rgba(61, 61, 61, 0.1);
+	background-color: $light;
+}
+
+.c9-blog-info h1 {
+	font-size: 4em;
+	line-height: .9;
+}
+
+.c9-blog-releases .c9-blog-posts {
+	background-color: $light;
+	overflow-y: scroll;
+	max-height: calc(100vh - 108px);
+	-ms-scroll-snap-type: y mandatory;
+	scroll-snap-type: y mandatory;
+}
+
+.c9-blog-releases .c9-blog-posts .entry-article {
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	scroll-snap-align: start;
+}
+
+@media only screen and (max-width: 414px) {
+	.c9-blog-releases {
+		display: block;
+	}
+
+	.c9-blog-releases .c9-blog-posts {
+		overflow-y: visible;
+		max-height: none;
+	}
+
+	.c9-blog-releases .c9-blog-header {
+		min-height: 50vh;
+	}
 }
 
 .c9-block-post-grid header .c9-block-post-grid-title {
@@ -631,6 +723,14 @@ p.wp-block-subhead,
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 667px) {
+
+	.nav.nav-tabs .nav-item,
+	.entry-content .nav.nav-tabs .nav-item {
+		margin: 0px;
+	}
 }
 
 .c9-vertical-tabs .tab-content {
