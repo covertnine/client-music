@@ -92,6 +92,10 @@ if (!function_exists('c9_client_setup')) {
 						'comment_status'	=> 'closed',
 						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory() . '/client/content/home.html')
 					),
+					'about'			=> array(
+						'comment_status'	=> 'closed',
+						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory() . '/client/content/about.html')
+					),
 					'setup'		=> array(
 						'comment_status'	=> 'closed',
 						'post_type'			=> 'page',
@@ -116,9 +120,9 @@ if (!function_exists('c9_client_setup')) {
 					'blogdescription'	=> __('C9 Music is a block-based theme for WordPress 5 that uses Bootstrap\'s responsive grid system, a single level dropdown menu navbar, Gutenberg blocks with custom pagination and WooCommerce.', 'c9-music'),
 				),
 				'theme_mods'		=> array(
-					'custom_logo' 			=> '{{logo}}',
+					'custom_logo' 			=> '/client/client-assets/img/c9-music-logo.svg',
 					'c9_show_search'		=> 'show',
-					'c9_copyright_content'	=> '&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website design by COVERT NINE</a>.',
+					'c9_copyright_content'	=> '&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website by COVERT NINE</a>.',
 					'c9_default_font'		=> 'yes',
 					'c9_heading_font'		=> 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
 					'c9_subheading_font'	=> 'Rubik:ital,wght@0,300;0,400;0,700;1,400;1,700',
@@ -140,6 +144,11 @@ if (!function_exists('c9_client_setup')) {
 						'name'			=>	__('Top Navigation Menu', 'c9-music'),
 						'items'			=> array(
 							'page_home',
+							'page_about'	=> array(
+								'type'		=> 'post_type',
+								'object'	=> 'page',
+								'object_id'	=> '{{about}}',
+							),
 							'page_setup'	=> array(
 								'type'		=> 'post_type',
 								'object'	=> 'page',

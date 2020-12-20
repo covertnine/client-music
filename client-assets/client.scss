@@ -652,31 +652,8 @@ p.wp-block-subhead,
 	scroll-snap-align: start;
 }
 
-.c9-blog-releases .c9-blog-posts .entry-article .post-content {
-	display: none;
-}
-
-.c9-blog-releases .c9-blog-posts .entry-article .post {
-	position: relative;
-}
-
 .c9-blog-posts .entry-footer {
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	text-align: right;
-}
-
-.c9-blog-posts .entry-footer .cat-links,
-.c9-blog-posts .entry-footer .tags-links {
-	visibility: hidden;
-}
-
-.c9-blog-posts .entry-footer .cat-links a,
-.c9-blog-posts .entry-footer .tags-links a {
-	visibility: visible;
-	display: block;
-	padding: 0;
+	margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 414px) {
@@ -691,6 +668,10 @@ p.wp-block-subhead,
 
 	.c9-blog-releases .c9-blog-header {
 		min-height: 50vh;
+	}
+
+	.c9-blog-posts .entry-footer {
+		padding: 0px;
 	}
 }
 
