@@ -86,6 +86,26 @@ if (!function_exists('c9_client_setup')) {
 						'post_title' => _x('C9 Music Logo', 'C9 Music Logo', 'c9-music'),
 						'file' => '/client/client-assets/img/c9-music-logo.svg',
 					),
+					'featured-image-1' => array(
+						'post_title' => _x('Featured Image 1', 'C9 Featured Image 1', 'c9-music'),
+						'file' => '/client/client-assets/img/widescreen-placeholder-hero-1920x1200-v1.jpg',
+					),
+					'featured-image-populate_roles_260()' => array(
+						'post_title' => _x('Featured Image populate_roles_260()', 'C9 Featured Image 2', 'c9-music'),
+						'file' => '/client/client-assets/img/widescreen-placeholder-hero-1920x1200-v2.jpg',
+					),
+					'featured-image-3' => array(
+						'post_title' => _x('Featured Image 3', 'C9 Featured Image 3', 'c9-music'),
+						'file' => '/client/client-assets/img/widescreen-placeholder-hero-1920x1200-v3.jpg',
+					),
+					'featured-image-4' => array(
+						'post_title' => _x('Featured Image 4', 'C9 Featured Image 4', 'c9-music'),
+						'file' => '/client/client-assets/img/widescreen-placeholder-hero-1920x1200-v4.jpg',
+					),
+					'featured-image-5' => array(
+						'post_title' => _x('Featured Image 5', 'C9 Featured Image 5', 'c9-music'),
+						'file' => '/client/client-assets/img/widescreen-homepage-hero-1920x1200-v2.jpg',
+					),
 				),
 				'posts'	=> array(
 					'home'			=> array(
@@ -94,6 +114,8 @@ if (!function_exists('c9_client_setup')) {
 					),
 					'about'			=> array(
 						'comment_status'	=> 'closed',
+						'post_type'			=> 'page',
+						'post_title'		=> __('About', 'c9-music'),
 						'post_content'		=>  $wp_filesystem->get_contents(get_template_directory() . '/client/content/about.html')
 					),
 					'setup'		=> array(
@@ -111,6 +133,31 @@ if (!function_exists('c9_client_setup')) {
 					'blog'			=> array(
 						'post_content'			=> __('This page will show all of the blog posts once you have populated your database with blog items.', 'c9-music')
 					),
+					'first-blog-post' => array(
+						'post_type' => 'post',
+						'post_title' => __('First Blog Post', 'c9-music'),
+						'thumbnail' => '{{featured-image-1}}',
+					),
+					'second-blog-post' => array(
+						'post_type' => 'post',
+						'post_title' => __('Second Blog Post', 'c9-music'),
+						'thumbnail' => '{{featured-image-2}}',
+					),
+					'third-blog-post' => array(
+						'post_type' => 'post',
+						'post_title' => __('Third Blog Post', 'c9-music'),
+						'thumbnail' => '{{featured-image-3}}',
+					),
+					'fourth-blog-post' => array(
+						'post_type' => 'post',
+						'post_title' => __('Fourth Blog Post', 'c9-music'),
+						'thumbnail' => '{{featured-image-4}}',
+					),
+					'fifth-blog-post' => array(
+						'post_type' => 'post',
+						'post_title' => __('Fifth Blog Post', 'c9-music'),
+						'thumbnail' => '{{featured-image-5}}',
+					)
 				),
 				'options'			=> array(
 					'show_on_front'		=> 'page',
