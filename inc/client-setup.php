@@ -167,7 +167,7 @@ if (!function_exists('c9_client_setup')) {
 					'blogdescription'	=> __('C9 Music is a block-based theme for WordPress 5 that uses Bootstrap\'s responsive grid system, a single level dropdown menu navbar, Gutenberg blocks with custom pagination and WooCommerce.', 'c9-music'),
 				),
 				'theme_mods'		=> array(
-					'custom_logo' 			=> '/client/client-assets/img/c9-music-logo.svg',
+					'custom_logo' 			=> '{{logo}}',
 					'c9_show_search'		=> 'show',
 					'c9_copyright_content'	=> '&copy; 2020. <a href="https://www.covertnine.com" title="Web design company in Chicago" target="_blank">WordPress Website by COVERT NINE</a>.',
 					'c9_default_font'		=> 'yes',
