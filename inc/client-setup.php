@@ -188,22 +188,22 @@ if (!function_exists('c9_client_setup')) {
 						'c9music_company'	=> array(
 							'text',
 							array(
-								'title'	=> __('Company Menu', 'c9-music'),
+								'title'	=> __('Information Menu', 'c9-music'),
 								'text'	=> '<ul id="menu-footer-company" class="menu">
 									<li class="menu-item">
-										<a href="#">Our History</a>
+										<a href="#">Placeholder Link</a>
 									</li>
 									<li class="menu-item">
-										<a href="/#browse-menu">Browse Menu</a>
+										<a href="#">Sample Menu Link</a>
 									</li>
 									<li class="menu-item">
-										<a href="/#order">Order Now</a>
+										<a href="#">Test Page Link</a>
 									</li>
 									<li class="menu-item">
-										<a href="#">Contact Us</a>
+										<a href="#">Contact</a>
 									</li>
 									<li class="menu-item">
-										<a href="#">Privacy Policy</a>
+										<a href="#">Privacy</a>
 									</li>
 								</ul>'
 							)
@@ -215,7 +215,7 @@ if (!function_exists('c9_client_setup')) {
 							'text',
 							array(
 								'title'	=> __('About C9-Music', 'c9-music'),
-								'text'	=> __('Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme setup. The blocks plugin includes the custom WordPress blocks for tabs, toggles, and the responsive grid system that makes the theme look super duper.', 'c9-music')
+								'text'	=> __('Be sure to activate the <strong>C9 Blocks Plugin</strong> during theme setup. The blocks plugin includes the custom WordPress blocks for tabs, toggles, and the responsive grid system that makes the theme look super duper. WooCommerce is also fully supported for selling your stuff!', 'c9-music')
 							)
 						)
 					),
