@@ -1718,6 +1718,70 @@ p.demo_store {
 }
 
 /****************************************************************************************/
+/*breadcrumbs*/
+
+.woocommerce .site-main .woocommerce-breadcrumb {
+	max-width: 1140px;
+	margin: 30px auto;
+	padding-left: 0px;
+	font-size: 1.6em;
+	letter-spacing: 0.05px;
+	text-align: left;
+	color: $dark;
+	text-transform: uppercase;
+}
+
+.woocommerce .site-main .woocommerce-breadcrumb a {
+	color: $dark;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+
+.woocommerce .site-main .woocommerce-breadcrumb a:hover {
+	color: #9b9b9b;
+	text-decoration: none;
+}
+
+/****************************************************************************************/
+/* product index from breadcrumbs */
+
+.c9.woocommerce #wrapper-navbar {
+	background-color: $dark;
+}
+
+.c9 .woocommerce-products-header__title {
+	font-family: $headings-font-family;
+	font-weight: 700;
+	font-size: 7.9em;
+	line-height: 1;
+}
+
+.c9.woocommerce-result-count {
+	font-family: $font-family-base;
+}
+
+.page-search-results nav {
+	margin: 0px auto;
+	text-align: center;
+}
+
+.page-search-results nav .pagination {
+	max-width: 1140px;
+	margin: 0px auto;
+	text-align: center;
+	display: inline-block;
+}
+
+.page-search-results nav .pagination .page-item {
+	display: inline-block;
+}
+
+.c9.woocommerce nav.woocommerce-pagination,
+.page-search-results nav .pagination {
+	margin-bottom: 20px;
+}
+
+/****************************************************************************************/
 /* Footer */
 /****************************************************************************************/
 .site :focus,
