@@ -1009,7 +1009,14 @@ p.wp-block-subhead,
 .site .wp-block-button__link,
 .wp-block-button:not(.is-style-outline) .wp-block-button__link.mce-content-body,
 .wp-block-file__button,
-.wp-block-file .wp-block-file__button {
+.wp-block-file .wp-block-file__button,
+.wp-block-button__link:not([href]):not([tabindex]),
+.wp-block-button a:not([href]):not([tabindex]):focus,
+.wp-block-button a:not([href]):not([tabindex]):hover,
+.c9 .woocommerce #respond input#submit,
+.c9 .woocommerce a.button,
+.c9 .woocommerce button.button,
+.c9 .woocommerce input.button {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-family: $font-family-base;
