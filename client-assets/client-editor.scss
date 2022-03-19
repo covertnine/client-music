@@ -8,6 +8,11 @@ body .editor-styles-wrapper {
 	padding: 0px;
 }
 
+html :where(.editor-styles-wrapper) p {
+	font-size: 1.6em;
+	line-height: 1.6;
+}
+
 .wp-block-button .wp-block-button__link:not([href]):not([tabindex]) {
 	font-size: 14px;
 }
