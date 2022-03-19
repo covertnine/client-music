@@ -388,7 +388,7 @@ p {
 @media only screen and (min-width: 768px) {
 
 	#page-wrapper {
-		margin-top: -108px;
+		margin-top: -115px;
 	}
 }
 
@@ -1016,7 +1016,8 @@ p.wp-block-subhead,
 .c9 .woocommerce #respond input#submit,
 .c9 .woocommerce a.button,
 .c9 .woocommerce button.button,
-.c9 .woocommerce input.button {
+.c9 .woocommerce input.button,
+.wp-block-button .wp-block-button__link:not([href]):not([tabindex]) {
 	text-transform: uppercase;
 	font-weight: 700;
 	font-family: $font-family-base;
@@ -1058,11 +1059,18 @@ p.wp-block-subhead,
 	background-color: $secondary;
 }
 
+.wp-block-button__link,
+.wp-block-button .wp-block-button__link,
+.wp-block-button .wp-block-button__link:not([href]):not([tabindex]) {
+	padding: 13px 35px;
+}
+
 .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 .wp-block-button.is-style-outline .wp-block-button__link:not([href]):not([tabindex]),
 .wp-block-button__link.c9-button-shape-outline,
 .is-style-outline .wp-block-button__link {
 	border: 2px solid;
+	padding: 11px 35px;
 }
 
 .c9 button:hover,
