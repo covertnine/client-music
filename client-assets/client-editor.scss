@@ -78,3 +78,10 @@ html :where(.editor-styles-wrapper) p {
 .editor-styles-wrapper .wp-block[data-type^="woocommerce/"] .wc-block-grid__products .wc-block-grid__product a:not(.wp-block-button__link) {
 	text-decoration: none;
 }
+
+@media only screen and (min-width: 1500px) {
+	body.folded .is-sidebar-opened .editor-styles-wrapper .wp-block[data-type="c9-blocks/grid"] {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
