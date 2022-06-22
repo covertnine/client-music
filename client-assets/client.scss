@@ -830,9 +830,14 @@ p.wp-block-subhead,
 .editor-styles-wrapper .is-root-container ul[data-type="core/list"],
 .entry-content ul:not(.blocks-gallery-grid),
 .editor-styles-wrapper ul,
-.editor-styles-wrapper ul li {
+.editor-styles-wrapper ul li,
+.entry-content ol:not(.wp-block-gallery),
+.entry-content ul:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links),
+.entry-content>ul:not(.blocks-gallery-grid),
+.entry-content>ul:not(.blocks-gallery-grid) li {
 	list-style: none;
 }
+
 
 .entry-content ol li:before,
 .editor-styles-wrapper ol li:before {
@@ -878,6 +883,14 @@ p.wp-block-subhead,
 .editor-styles-wrapper .editor-rich-text ol.light-list li,
 .entry-content ol.light-list li {
 	color: $light;
+}
+
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"]:not(.wp-block-list) {
+	padding-left: 25px;
+}
+
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
+	padding-left: 0px;
 }
 
 /* editor block quote style */
