@@ -67,6 +67,11 @@ html :where(.editor-styles-wrapper) p {
 	font-weight: 300;
 }
 
+/* list item */
+.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
+	padding-left: 10px;
+}
+
 /* woocommerce */
 .wp-block[data-type="^woocommerce/"] .wc-block-grid__products .wc-block-grid__product,
 .edit-post-visual-editor .editor-block-list__block .wc-block-grid__product-title,

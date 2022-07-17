@@ -824,7 +824,7 @@ p.wp-block-subhead,
 .entry-content ul li:before,
 .editor-styles-wrapper ol li:before,
 .entry-content ol li:before {
-	margin: 0 4px 0 -27px;
+	margin: 0 0px 0 -27px;
 }
 
 .entry-content ul .dark-color-text {
@@ -863,10 +863,6 @@ p.wp-block-subhead,
 
 .editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"]:not(.wp-block-list) {
 	padding-left: 25px;
-}
-
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
-	padding-left: 27px;
 }
 
 /* editor block quote style */
