@@ -444,7 +444,8 @@ p.wp-block-subhead,
 #fullscreensearch form .btn {
     font-family: $font-family-base;
     padding: 16px 55px;
-    font-size: 12px margin-top: 20px;
+    font-size: 12px;
+    margin-top: 20px;
 }
 
 #fullscreensearch input[type=search] {
@@ -1196,7 +1197,8 @@ p.wp-block-subhead,
 .woocommerce-store-notice,
 p.demo_store {
     background-color: $secondary;
-    font-size: 16px top: auto;
+    font-size: 16px;
+    top: auto;
     bottom: 0;
     position: fixed;
     height: 50px;
@@ -1598,7 +1600,8 @@ p.demo_store {
 }
 
 .woocommerce .woocommerce-product-details__short-description {
-    font-size: 15px line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 .woocommerce #content div.product div.summary,
@@ -1618,7 +1621,8 @@ p.demo_store {
 }
 
 .single-product.woocommerce .woocommerce-breadcrumb {
-    font-size: 14px line-height: 1.6;
+    font-size: 14px;
+    line-height: 1.6;
     text-transform: uppercase;
     color: $gray-900;
     font-weight: 200;
@@ -1720,7 +1724,8 @@ p.demo_store {
     max-width: 1140px;
     margin: 30px auto;
     padding-left: 0px;
-    font-size: 16px letter-spacing: 0.05px;
+    font-size: 16px;
+    letter-spacing: 0.05px;
     text-align: left;
     color: $dark;
     text-transform: uppercase;
