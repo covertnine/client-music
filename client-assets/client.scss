@@ -783,9 +783,16 @@ p.wp-block-subhead,
     font-size: 1.4rem;
     content: "\f18e";
     font-family: fontawesome;
-    left: -10px;
     position: relative;
     margin-right: 14px;
+}
+
+ul[class=""],
+.c9-grid .c9-column-inner>ul[class=""],
+.is-root-container>ul.wp-block-list,
+.editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list],
+html :where(.editor-styles-wrapper) .is-root-container>ul.wp-block-list {
+    padding: 0px 0px 0px 14px;
 }
 
 .entry-content>ul:not(.blocks-gallery-grid),
@@ -802,17 +809,20 @@ p.wp-block-subhead,
     list-style: none;
 }
 
+ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links) li,
+ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links)>li,
+.c9-grid .c9-column-inner>ul[class=""]:not(.blocks-gallery-grid):not(.nav-tabs):not(.c9-share-list):not(.wp-block-social-links)>li,
+ul[class=""]:not(.wp-block-gallery):not(.wp-block-social-links) li,
+.is-root-container>ul.wp-block-list li,
+.is-root-container>.c9-grid ul.wp-block-list li,
+html :where(.editor-styles-wrapper) ul.wp-block-list li,
+.editor-styles-wrapper .c9-grid ul.wp-block-list[data-block] li {
+    list-style-type: none;
+}
 
 .entry-content ol li:before,
 .editor-styles-wrapper ol li:before {
     color: $primary;
-}
-
-.editor-styles-wrapper ul li:before,
-.entry-content ul li:before,
-.editor-styles-wrapper ol li:before,
-.entry-content ol li:before {
-    margin: 0 0px 0 -27px;
 }
 
 .entry-content ul .dark-color-text {
@@ -849,13 +859,15 @@ p.wp-block-subhead,
     color: $light;
 }
 
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"]:not(.wp-block-list) {
-    padding-left: 25px;
-}
-
 /* editor block quote style */
 .wp-block-quote.light-quote p {
     color: $light;
+}
+
+.editor-styles-wrapper blockquote::before,
+.entry-content blockquote::before {
+    left: -30px;
+    top: -20px;
 }
 
 /* wp-block-gallery */

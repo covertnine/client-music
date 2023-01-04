@@ -65,11 +65,6 @@ html :where(.editor-styles-wrapper) p {
     font-weight: 300;
 }
 
-/* list item */
-.editor-styles-wrapper ul:not(.blocks-gallery-grid):not(.wp-block-gallery):not(.wc-block-grid__products):not(.gfield_checkbox):not(.gfield_radio):not(.nav-tabs):not(.c9-share-list):not(.products):not(.gform_fields)[data-type="core/list"] {
-    padding-left: 10px;
-}
-
 .editor-styles-wrapper .wp-block[data-type^="woocommerce/"] .wc-block-grid__products .wc-block-grid__product a:not(.wp-block-button__link) {
     text-decoration: none;
 }
@@ -79,4 +74,20 @@ html :where(.editor-styles-wrapper) p {
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+/* list blocks */
+ol[class~="wp-block-list"] li ol li,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"] li ol li {
+    padding-left: 30px;
+}
+
+.editor-styles-wrapper .c9-grid ol[class~="wp-block-list"],
+.editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"] {
+    padding-left: 46px;
+}
+
+.editor-styles-wrapper .c9-grid ol[class~="wp-block-list"] ol,
+.editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"] ol {
+    padding-left: 0px;
 }
