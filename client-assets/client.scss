@@ -776,6 +776,13 @@ p.wp-block-subhead,
     margin: 10px 0px;
 }
 
+.editor-styles-wrapper .is-root-container ul[data-type="core/list"] li,
+.editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li,
+.editor-styles-wrapper .wp-block-latest-posts li,
+.entry-content ul:not(.blocks-gallery-grid):not(.wp-block-social-links) li {
+    positon: relative;
+}
+
 .editor-styles-wrapper .is-root-container ul[data-type="core/list"] li:before,
 .editor-styles-wrapper .editor-rich-text ul:not(.wp-block-gallery) li:before,
 .editor-styles-wrapper .wp-block-latest-posts li:before,
@@ -783,8 +790,8 @@ p.wp-block-subhead,
     font-size: 1.4rem;
     content: "\f18e";
     font-family: fontawesome;
-    position: relative;
-    margin-right: 14px;
+    position: absolute;
+    left: -12px;
 }
 
 ul[class=""],
@@ -792,7 +799,7 @@ ul[class=""],
 .is-root-container>ul.wp-block-list,
 .editor-styles-wrapper .c9-grid [data-block] ul[class~=wp-block-list],
 html :where(.editor-styles-wrapper) .is-root-container>ul.wp-block-list {
-    padding: 0px 0px 0px 14px;
+    padding: 0px 0px 0px 45px;
 }
 
 .entry-content>ul:not(.blocks-gallery-grid),
@@ -818,6 +825,16 @@ ul[class=""]:not(.wp-block-gallery):not(.wp-block-social-links) li,
 html :where(.editor-styles-wrapper) ul.wp-block-list li,
 .editor-styles-wrapper .c9-grid ul.wp-block-list[data-block] li {
     list-style-type: none;
+}
+
+.c9-grid .c9-column-inner>ol[class=""]>li::before,
+.c9-grid .c9-column-inner>ol[class=""]>li>ol>li::before,
+ol[class=""]>li::before,
+ol[class=""]>li>ol>li::before,
+ol[class~="wp-block-list"] li>ol>li::before,
+ol[class~="wp-block-list"]>li::before {
+    width: 22px;
+    margin: 0px 0px 0px -22px;
 }
 
 .entry-content ol li:before,

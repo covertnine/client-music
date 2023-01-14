@@ -108,3 +108,13 @@ ol[class~="wp-block-list"] li ol li,
 .editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"] ol {
     padding-left: 0px;
 }
+
+.c9-grid .c9-column-inner>ul[class=""],
+.editor-styles-wrapper .c9-grid [data-block] ol[class~="wp-block-list"],
+.editor-styles-wrapper .c9-grid [data-block] ul[class~="wp-block-list"],
+.is-root-container>ol.wp-block-list,
+.is-root-container>ul.wp-block-list,
+html :where(.editor-styles-wrapper) .is-root-container>ul.wp-block-list,
+ul[class=""] {
+    padding: 0px 0px 0px 45px;
+}
