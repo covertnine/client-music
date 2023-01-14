@@ -7,6 +7,23 @@ body .editor-styles-wrapper {
     padding: 0px;
 }
 
+
+.post-type-page .editor-styles-wrapper .block-editor-block-list__layout.is-root-container> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 1140px;
+}
+
+@media only screen and (min-width: 992px) {
+
+    body.post-type-post .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+    body.post-type-post .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty="true"],
+    body.post-type-post .is-root-container>.block-list-appender.wp-block,
+    body.post-type-post:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"],
+    body.post-type-post:not(.folded) .edit-post-layout.is-sidebar-opened .wp-block[data-type="core/paragraph"][data-empty="true"] {
+        max-width: 900px;
+    }
+}
+
+
 html :where(.editor-styles-wrapper) p {
     line-height: 1.6;
 }
