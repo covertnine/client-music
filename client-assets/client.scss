@@ -1013,6 +1013,14 @@ ol[class~="wp-block-list"]>li::before {
     background-color: $dark;
 }
 
+.has-color-dark-color {
+    color: $dark !important;
+}
+
+.has-color-light-color {
+    color: $light !important;
+}
+
 mark.has-inline-color,
 .mark.has-inline-color {
     background-color: inherit;
