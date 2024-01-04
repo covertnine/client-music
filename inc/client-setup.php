@@ -165,7 +165,7 @@ function c9music_register_block_patterns()
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Band Social Tree</mark></h1>
+<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Artist Social Tree</mark></h1>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":"60px"} -->
@@ -473,14 +473,154 @@ https://open.spotify.com/album/1EFnZuLUzXx0B6ZsL9aqum?si=mGx9OSaiSJ2T2GlAojjwDw
 
 
 		register_block_pattern(
-			'c9-music/c9-artist-social-profiles',
+			'c9-music/c9-artist-social-profiles-promo',
 			array(
-				'title'			=> __('Artist Promo + Social Profiles', 'c9-music'),
+				'title'			=> __('Artist Promo Links + Content', 'c9-music'),
 				'description' 	=> __('A template for a list of links plus a few videos and embeds to promote music or video.', 'c9-music'),
 				'content'		=> $c9_artist_promo_social_profiles_content,
 				'categories'	=> array('COVERT NINE', 'header', 'buttons', 'text', 'landingpage')
 			),
 		);		
+
+		$c9_artist_promo_social_profiles_content_simp = '<!-- wp:cover {"url":"' . esc_url($image_path_1) . '","id":2789,"hasParallax":true,"dimRatio":20,"overlayColor":"color-primary","minHeight":995,"minHeightUnit":"px","align":"full","style":{"color":{}},"c9ContainerWidth":""} -->
+		<div class="wp-block-cover alignfull has-parallax" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-color-primary-background-color has-background-dim-20 has-background-dim"></span><div role="img" class="wp-block-cover__image-background wp-image-2789 has-parallax" style="background-position:50% 50%;background-image:url(' . esc_url($image_path_1) . ')"></div><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+		<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+		
+		<!-- wp:image {"align":"center","id":3798,"width":"72px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
+		<figure class="wp-block-image aligncenter size-large is-resized"><img src="' . esc_url($logo_path) . '" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
+		<!-- /wp:image -->
+		
+		<!-- wp:heading {"textAlign":"center","level":1} -->
+		<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Artist Social Tree</mark></h1>
+		<!-- /wp:heading -->
+		
+		<!-- wp:spacer {"height":"60px"} -->
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+		
+		<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+		<p class="has-text-align-center has-small-font-size"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Advanced "Link tree" style layout with video sections + tour links</mark></p>
+		<!-- /wp:paragraph -->
+		
+		<!-- wp:spacer {"height":"10px"} -->
+		<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+		<!-- /wp:spacer -->
+		
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"vertical"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|80"}}}} -->
+		<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--80)"><!-- wp:button {"backgroundColor":"c9music-mint-green","width":50} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-c-9-music-mint-green-background-color has-background wp-element-button" href="#stream-album">Stream Album</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"textColor":"color-light","width":50,"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-color-light-color has-text-color wp-element-button" href="#tour-dates">Tour Dates</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"backgroundColor":"c9music-dark-gray","textColor":"color-light","width":50,"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-color-light-color has-c-9-music-dark-gray-background-color has-text-color has-background wp-element-button" href="#tour-promo-video">Tour Promo Video</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"textColor":"c9music-mint-green","width":50,"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-c-9-music-mint-green-color has-text-color wp-element-button" href="#new-music-video">New Music Video</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"textColor":"c9music-red","width":50,"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-c-9-music-red-color has-text-color wp-element-button" href="#">YouTube</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"width":50,"style":{"color":{"text":"#886432eb"}},"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#886432eb">Instagram</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"width":50,"style":{"color":{"text":"#31ff00eb"}},"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#31ff00eb">Spotify</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"width":50,"style":{"color":{"text":"#ffffffeb"}},"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#ffffffeb">Apple Music</a></div>
+		<!-- /wp:button -->
+		
+		<!-- wp:button {"width":50,"style":{"color":{"text":"#f9ff00eb"}},"className":"is-style-outline"} -->
+		<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#f9ff00eb">Merch</a></div>
+		<!-- /wp:button --></div>
+		<!-- /wp:buttons --></div></div>
+		<!-- /wp:cover -->';
+
+		register_block_pattern(
+			'c9-music/c9-artist-social-profiles',
+			array(
+				'title'			=> __('Artist Promo Links', 'c9-music'),
+				'description' 	=> __('A template for a list of links.', 'c9-music'),
+				'content'		=> $c9_artist_promo_social_profiles_content_simp,
+				'categories'	=> array('COVERT NINE', 'header', 'buttons', 'text', 'landingpage')
+			),
+		);	
+
+$c9_artist_promo_alt = '<!-- wp:cover {"url":"' . $video_path_1 . '","id":2159,"dimRatio":70,"backgroundType":"video","minHeight":995,"minHeightUnit":"px","gradient":"midnight","align":"full","style":{"color":[]},"c9ContainerWidth":""} -->
+<div class="wp-block-cover alignfull" style="min-height:995px"><span aria-hidden="true" class="wp-block-cover__background has-background-dim-70 has-background-dim wp-block-cover__gradient-background has-background-gradient has-midnight-gradient-background"></span><video class="wp-block-cover__video-background intrinsic-ignore" autoplay muted loop playsinline src="' . $video_path_1 . '" data-object-fit="cover"></video><div class="wp-block-cover__inner-container"><!-- wp:spacer {"height":"50px"} -->
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:image {"align":"center","id":3798,"width":"72px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://music.local/wp-content/themes/c9-music/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
+<!-- /wp:image -->
+
+<!-- wp:heading {"textAlign":"center","level":1} -->
+<h1 class="wp-block-heading has-text-align-center"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">Artist Promo Tree</mark></h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"center","fontSize":"small"} -->
+<p class="has-text-align-center has-small-font-size"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-color-light-color">"Link tree" style layout with button links</mark> + a video background</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:spacer {"height":"10px"} -->
+<div style="height:10px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center","orientation":"vertical"},"style":{"spacing":{"margin":{"bottom":"var:preset|spacing|80"}}}} -->
+<div class="wp-block-buttons" style="margin-bottom:var(--wp--preset--spacing--80)"><!-- wp:button {"backgroundColor":"vivid-purple","width":50} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50"><a class="wp-block-button__link has-vivid-purple-background-color has-background wp-element-button" href="#">Stream Album</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"textColor":"color-light","gradient":"luminous-dusk","width":50,"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-color-light-color has-luminous-dusk-gradient-background has-text-color has-background wp-element-button" href="#">Tour Dates</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"textColor":"color-light","gradient":"luminous-dusk","width":50,"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-color-light-color has-luminous-dusk-gradient-background has-text-color has-background wp-element-button" href="#">Tour Promo Video</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"textColor":"c9music-red","width":50,"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-c-9-music-red-color has-text-color wp-element-button" href="#">YouTube</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"width":50,"style":{"color":{"text":"#c6ad89eb"}},"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#c6ad89eb">Instagram</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"width":50,"style":{"color":{"text":"#31ff00eb"}},"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#31ff00eb">Spotify</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"width":50,"style":{"color":{"text":"#ffffffeb"}},"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#ffffffeb">Apple Music</a></div>
+<!-- /wp:button -->
+
+<!-- wp:button {"width":50,"style":{"color":{"text":"#f9ff00eb"}},"className":"is-style-outline"} -->
+<div class="wp-block-button has-custom-width wp-block-button__width-50 is-style-outline"><a class="wp-block-button__link has-text-color wp-element-button" href="#" style="color:#f9ff00eb">Merch</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div></div>
+<!-- /wp:cover -->';
+
+		register_block_pattern(
+			'c9-music/c9-artist-social-profiles-alt',
+			array(
+				'title'			=> __('Artist Promo Links Alt', 'c9-music'),
+				'description' 	=> __('An artist promo template for a list of links.', 'c9-music'),
+				'content'		=> $c9_artist_promo_alt,
+				'categories'	=> array('COVERT NINE', 'header', 'buttons', 'text', 'landingpage')
+			),
+		);
 
 		$c9_watch_video_core = '<!-- wp:cover {"url":"' . esc_url($video_path_1) . '","id":3697,"dimRatio":20,"overlayColor":"color-primary","backgroundType":"video","minHeight":995,"minHeightUnit":"px","align":"full"} -->
 <div class="wp-block-cover alignfull has-background-dim-20 has-color-primary-background-color has-background-dim" style="min-height:995px"><video class="wp-block-cover__video-background" autoplay muted loop playsinline src="' . esc_url($video_path_1) . '"></video><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"color":{"background":"#ededed"}}} -->
