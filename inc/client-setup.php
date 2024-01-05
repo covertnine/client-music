@@ -562,7 +562,7 @@ $c9_artist_promo_alt = '<!-- wp:cover {"url":"' . $video_path_1 . '","id":2159,"
 <!-- /wp:spacer -->
 
 <!-- wp:image {"align":"center","id":3798,"width":"72px","height":"auto","aspectRatio":"1","sizeSlug":"large","linkDestination":"none","className":"is-resized"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://music.local/wp-content/themes/c9-music/client/client-assets/img/feather-logo-gradient-rb.svg" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="' . esc_url($image_path_9) . '" alt="" class="wp-image-3798" style="aspect-ratio:1;width:72px;height:auto"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":1} -->
